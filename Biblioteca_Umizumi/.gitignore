@@ -1,0 +1,54 @@
+# 🔁 Carpetas generadas automáticamente por compilación
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# 🔒 Archivos de configuración del usuario (innecesarios para el equipo)
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 📂 Carpeta de configuración interna de Visual Studio
+.vs/
+
+# ⚙️ Configuración de paquetes NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# 🧪 Archivos temporales y de prueba
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+
+# 📝 Archivos de diseño/autogenerados fuera del control necesario
+*.Designer.cs~
+*.resx~
+
+# 🔍 Archivos de configuración local
+*.local.json
+launchSettings.json
+
+# ⛔ Evita subir configuraciones de VS Code (si lo usan)
+.vscode/
+
+# 📜 Archivos de publicación automática
+*.Publish.xml
+*.pubxml
+*.publishproj
+
+# 📦 Contenido del instalador o publicaciones previas
+PublishProfiles/
+*.msi
+*.zip
+*.tar.gz
+
+# 💡 EditorConfig si no deseas compartirlo
+# .editorconfig

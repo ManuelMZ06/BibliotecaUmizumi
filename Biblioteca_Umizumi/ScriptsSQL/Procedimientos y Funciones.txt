@@ -1,0 +1,125 @@
+-- Función escalar para encriptar contraseña con validación
+USE bd_inventario;
+GO
+
+IF OBJECT_ID('protect', 'FN') IS NOT NULL
+    DROP FUNCTION protect;
+GO
+
+CREATE FUNCTION [dbo].[protect](@valor VARCHAR(MAX))
+RETURNS VARBINARY(8000)
+AS
+BEGIN
+    IF LEN(@valor) < 8 
+        OR PATINDEX('%[A-Z]%', @valor) = 0 
+        OR PATINDEX('%[0-9]%', @valor) = 0 
+        OR PATINDEX('%[!@#$%^&*()_+=<>?/~.-]%', @valor) = 0
+    BEGIN
+        RETURN NULL;
+    END;
+
+    RETURN ENCRYPTBYPASSPHRASE('Sulul', @valor);
+END;
+GO
+
+-- Función escalar para desencriptar contraseña
+USE bd_inventario;
+GO
+
+IF OBJECT_ID('desprotect', 'FN') IS NOT NULL
+    DROP FUNCTION desprotect;
+GO
+
+CREATE FUNCTION [dbo].[desprotect](@val VARBINARY(8000))
+RETURNS VARCHAR(MAX)
+AS
+BEGIN
+    DECLARE @dat VARCHAR(MAX);
+    SET @dat = CONVERT(VARCHAR(MAX), DECRYPTBYPASSPHRASE('Sulul', @val));
+
+    IF @dat IS NULL
+        RETURN 'Error: No se pudo desencriptar';
+
+    RETURN @dat;
+END;
+GO
+
+-- Función escalar para validar login
+USE bd_inventario;
+GO
+
+IF OBJECT_ID('validar_login', 'FN') IS NOT NULL
+    DROP FUNCTION validar_login;
+GO
+
+CREATE FUNCTION [dbo].[validar_login] (
+    @usuario VARCHAR(50),
+    @password_ingresado VARCHAR(MAX)
+)
+RETURNS BIT
+AS
+BEGIN
+    DECLARE @esValido BIT = 0;
+    DECLARE @password_guardado VARBINARY(8000);
+
+    SELECT @password_guardado = password 
+    FROM Usuarios 
+    WHERE usuario = @usuario;
+
+    IF @password_guardado IS NOT NULL AND
+       CONVERT(VARCHAR(MAX), DECRYPTBYPASSPHRASE('Sulul', @password_guardado)) = @password_ingresado
+    BEGIN
+        SET @esValido = 1;
+    END
+
+    RETURN @esValido;
+END;
+GO
+
+-- Insertar roles iniciales para cumplimiento de FK en usuarios
+USE bd_inventario;
+GO
+
+IF NOT EXISTS (SELECT 1 FROM Roles WHERE NombreRol = 'Administrador')
+BEGIN
+    INSERT INTO Roles (NombreRol, status, created_at, updated_at)
+    VALUES ('Administrador', 1, GETDATE(), GETDATE());
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM Roles WHERE NombreRol = 'Empleado')
+BEGIN
+    INSERT INTO Roles (NombreRol, status, created_at, updated_at)
+    VALUES ('Empleado', 1, GETDATE(), GETDATE());
+END
+GO
+
+-- Crear un trigger llamado 'tr_sesion_bitacora' que se activa después de insertar en la tabla SesionTemporal
+CREATE TRIGGER tr_sesion_bitacora
+ON SesionTemporal
+AFTER INSERT
+AS
+BEGIN
+    -- Evita que se devuelvan recuentos innecesarios de filas afectadas
+    SET NOCOUNT ON;
+
+    -- Declaramos dos variables para capturar los datos del insert
+    DECLARE @IdUsuario INT, @TipoAccion VARCHAR(10)
+
+    -- Asignamos los valores del primer registro insertado (normalmente será uno a la vez)
+    SELECT TOP 1 @IdUsuario = IdUsuario, @TipoAccion = TipoAccion FROM inserted;
+
+    -- Si la acción es 'Inicio', se registra una nueva sesión en BitacoraSesiones
+    IF @TipoAccion = 'Inicio'
+    BEGIN
+        INSERT INTO BitacoraSesiones (IdUsuario)
+        VALUES (@IdUsuario);  -- FechaInicio se pone por defecto con GETDATE()
+    END
+    -- Si la acción es 'Cierre', se actualiza la sesión activa del usuario (la que no tenga FechaCierre)
+    ELSE IF @TipoAccion = 'Cierre'
+    BEGIN
+        UPDATE BitacoraSesiones
+        SET FechaCierre = GETDATE()  -- Se registra el cierre con la hora actual
+        WHERE IdUsuario = @IdUsuario AND FechaCierre IS NULL; -- Solo la sesión sin cerrar
+    END
+END;
