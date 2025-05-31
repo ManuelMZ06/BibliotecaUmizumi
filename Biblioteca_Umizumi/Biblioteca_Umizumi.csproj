@@ -63,6 +63,12 @@
     <Compile Include="Vista\Autenticacion\FormRegistro.Designer.cs">
       <DependentUpon>FormRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Dashboard\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,12 +77,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vista\Autenticacion\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Autenticacion\FormRegistro.resx">
       <DependentUpon>FormRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +104,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\user1.png" />
     <Content Include="ScriptsSQL\bd_inventario.txt" />
     <Content Include="ScriptsSQL\hola.txt" />
     <Content Include="ScriptsSQL\Permisos Para Usuarios.txt" />
