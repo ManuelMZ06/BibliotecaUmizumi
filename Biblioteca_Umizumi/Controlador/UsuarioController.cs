@@ -56,7 +56,7 @@ namespace BibliotecaUmizumi.Controlador
             {
                 using (SqlConnection conexion = Conexion.ObtenerConexion())
                 {
-                    string query = "SELECT dbo.validar_login(@usuario, @password)";
+                    string query = "SELECT COUNT(*) FROM Usuarios WHERE usuario = @usuario AND status = 1 AND dbo.validar_login(@usuario, @password) = 1";
 
                     using (SqlCommand comando = new SqlCommand(query, conexion))
                     {
@@ -73,6 +73,7 @@ namespace BibliotecaUmizumi.Controlador
                 return false;
             }
         }
+
         public static int ObtenerIdSiLoginValido(string usuario, string password)
         {
             using (SqlConnection conexion = Conexion.ObtenerConexion())

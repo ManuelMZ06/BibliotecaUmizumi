@@ -11,7 +11,7 @@ namespace BibliotecaUmizumi.Modelo
     {
         // Cadena de conexión a SQL Server
 
-        private static string cadenaConexion = "Server=PC-HUGO\\SQLEXPRESS;Database=bd_inventario;User Id=laraveluser;Password=Laravel2025$;";
+        private static string cadenaConexion = "Server=MZ-COMPUTER\\SQLEXPRESS;Database=bd_inventario;User Id=laraveluser;Password=Laravel2025$;";
 
 
         // Método para obtener la conexión

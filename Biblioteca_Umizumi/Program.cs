@@ -16,7 +16,8 @@ namespace Biblioteca_Umizumi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.Dashboard.Dashboard());
+            //Application.Run(new Vista.Dashboard.Dashboard());
+            Application.Run(new Vista.Autenticacion.FormLogin());
         }
     }
 }

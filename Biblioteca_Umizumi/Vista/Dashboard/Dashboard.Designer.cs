@@ -31,21 +31,69 @@
             this.lblSidebar = new System.Windows.Forms.Label();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.PanelSidebar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCRUD = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnRespaldos = new System.Windows.Forms.Button();
-            this.btnAnalisis = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesión = new System.Windows.Forms.Button();
+            this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.btnPredictivo = new System.Windows.Forms.Button();
-            this.PanelContenido = new System.Windows.Forms.Panel();
+            this.btnAnalisis = new System.Windows.Forms.Button();
+            this.btnRespaldos = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnCRUD = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMostrarEsconderSideBar = new System.Windows.Forms.Button();
-            this.pbUser = new System.Windows.Forms.PictureBox();
             this.panelCardUsuarios = new System.Windows.Forms.Panel();
+            this.btnCardUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelCardCRUD = new System.Windows.Forms.Panel();
+            this.btnCardCRUD = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelCardReportes = new System.Windows.Forms.Panel();
+            this.btnCardReportes = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panelCardRespaldos = new System.Windows.Forms.Panel();
+            this.btnCardRespaldos = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelContenido = new System.Windows.Forms.Panel();
+            this.PanelPredictivo = new System.Windows.Forms.Panel();
+            this.btnCardPredictivo = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelCardAnalisis = new System.Windows.Forms.Panel();
+            this.btnCardAnalisis = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pbCardPredictivo = new System.Windows.Forms.PictureBox();
+            this.pbCardAnalisis = new System.Windows.Forms.PictureBox();
+            this.pbCardRespaldos = new System.Windows.Forms.PictureBox();
+            this.pbCardReportes = new System.Windows.Forms.PictureBox();
+            this.pbCardCRUD = new System.Windows.Forms.PictureBox();
+            this.pbCardUser = new System.Windows.Forms.PictureBox();
+            this.pbPredictivo = new System.Windows.Forms.PictureBox();
+            this.pbAnalisis = new System.Windows.Forms.PictureBox();
+            this.pbRespaldos = new System.Windows.Forms.PictureBox();
+            this.pbReportes = new System.Windows.Forms.PictureBox();
+            this.pbCRUD = new System.Windows.Forms.PictureBox();
+            this.pbUser = new System.Windows.Forms.PictureBox();
             this.PanelSidebar.SuspendLayout();
-            this.PanelContenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panelCardUsuarios.SuspendLayout();
+            this.panelCardCRUD.SuspendLayout();
+            this.panelCardReportes.SuspendLayout();
+            this.panelCardRespaldos.SuspendLayout();
+            this.PanelContenido.SuspendLayout();
+            this.PanelPredictivo.SuspendLayout();
+            this.panelCardAnalisis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnalisis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRespaldos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCRUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSidebar
@@ -73,6 +121,12 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelSidebar.Controls.Add(this.panel3);
+            this.PanelSidebar.Controls.Add(this.pbPredictivo);
+            this.PanelSidebar.Controls.Add(this.pbAnalisis);
+            this.PanelSidebar.Controls.Add(this.pbRespaldos);
+            this.PanelSidebar.Controls.Add(this.pbReportes);
+            this.PanelSidebar.Controls.Add(this.pbCRUD);
             this.PanelSidebar.Controls.Add(this.pbUser);
             this.PanelSidebar.Controls.Add(this.btnPredictivo);
             this.PanelSidebar.Controls.Add(this.btnAnalisis);
@@ -85,66 +139,40 @@
             this.PanelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelSidebar.Location = new System.Drawing.Point(0, 0);
             this.PanelSidebar.Name = "PanelSidebar";
-            this.PanelSidebar.Size = new System.Drawing.Size(429, 1048);
+            this.PanelSidebar.Size = new System.Drawing.Size(429, 1317);
             this.PanelSidebar.TabIndex = 0;
             // 
-            // label1
+            // panel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Opciones";
+            this.panel3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel3.Controls.Add(this.btnCerrarSesión);
+            this.panel3.Controls.Add(this.lblCerrarSesion);
+            this.panel3.Location = new System.Drawing.Point(0, 946);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(429, 296);
+            this.panel3.TabIndex = 16;
             // 
-            // btnCRUD
+            // btnCerrarSesión
             // 
-            this.btnCRUD.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnCRUD.FlatAppearance.BorderSize = 0;
-            this.btnCRUD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCRUD.Location = new System.Drawing.Point(80, 350);
-            this.btnCRUD.Name = "btnCRUD";
-            this.btnCRUD.Size = new System.Drawing.Size(297, 44);
-            this.btnCRUD.TabIndex = 3;
-            this.btnCRUD.Text = "CRUD";
-            this.btnCRUD.UseVisualStyleBackColor = false;
+            this.btnCerrarSesión.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesión.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCerrarSesión.Location = new System.Drawing.Point(18, 29);
+            this.btnCerrarSesión.Name = "btnCerrarSesión";
+            this.btnCerrarSesión.Size = new System.Drawing.Size(76, 63);
+            this.btnCerrarSesión.TabIndex = 14;
+            this.btnCerrarSesión.Text = "←";
+            this.btnCerrarSesión.UseVisualStyleBackColor = true;
+            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
             // 
-            // btnReportes
+            // lblCerrarSesion
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Location = new System.Drawing.Point(80, 450);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(297, 44);
-            this.btnReportes.TabIndex = 4;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = false;
-            // 
-            // btnRespaldos
-            // 
-            this.btnRespaldos.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnRespaldos.FlatAppearance.BorderSize = 0;
-            this.btnRespaldos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRespaldos.Location = new System.Drawing.Point(80, 561);
-            this.btnRespaldos.Name = "btnRespaldos";
-            this.btnRespaldos.Size = new System.Drawing.Size(297, 44);
-            this.btnRespaldos.TabIndex = 5;
-            this.btnRespaldos.Text = "Respaldos";
-            this.btnRespaldos.UseVisualStyleBackColor = false;
-            // 
-            // btnAnalisis
-            // 
-            this.btnAnalisis.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnAnalisis.FlatAppearance.BorderSize = 0;
-            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalisis.Location = new System.Drawing.Point(80, 671);
-            this.btnAnalisis.Name = "btnAnalisis";
-            this.btnAnalisis.Size = new System.Drawing.Size(297, 44);
-            this.btnAnalisis.TabIndex = 6;
-            this.btnAnalisis.Text = "Análisis de Datos";
-            this.btnAnalisis.UseVisualStyleBackColor = false;
+            this.lblCerrarSesion.AutoSize = true;
+            this.lblCerrarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCerrarSesion.Location = new System.Drawing.Point(115, 43);
+            this.lblCerrarSesion.Name = "lblCerrarSesion";
+            this.lblCerrarSesion.Size = new System.Drawing.Size(153, 36);
+            this.lblCerrarSesion.TabIndex = 15;
+            this.lblCerrarSesion.Text = "Cerrar Sesion";
             // 
             // btnPredictivo
             // 
@@ -158,16 +186,63 @@
             this.btnPredictivo.Text = "Análisis Predictivo";
             this.btnPredictivo.UseVisualStyleBackColor = false;
             // 
-            // PanelContenido
+            // btnAnalisis
             // 
-            this.PanelContenido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PanelContenido.Controls.Add(this.panelCardUsuarios);
-            this.PanelContenido.Controls.Add(this.btnMostrarEsconderSideBar);
-            this.PanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenido.Location = new System.Drawing.Point(429, 0);
-            this.PanelContenido.Name = "PanelContenido";
-            this.PanelContenido.Size = new System.Drawing.Size(1341, 1048);
-            this.PanelContenido.TabIndex = 1;
+            this.btnAnalisis.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnAnalisis.FlatAppearance.BorderSize = 0;
+            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalisis.Location = new System.Drawing.Point(80, 671);
+            this.btnAnalisis.Name = "btnAnalisis";
+            this.btnAnalisis.Size = new System.Drawing.Size(297, 44);
+            this.btnAnalisis.TabIndex = 6;
+            this.btnAnalisis.Text = "Análisis de Datos";
+            this.btnAnalisis.UseVisualStyleBackColor = false;
+            // 
+            // btnRespaldos
+            // 
+            this.btnRespaldos.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnRespaldos.FlatAppearance.BorderSize = 0;
+            this.btnRespaldos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRespaldos.Location = new System.Drawing.Point(80, 561);
+            this.btnRespaldos.Name = "btnRespaldos";
+            this.btnRespaldos.Size = new System.Drawing.Size(297, 44);
+            this.btnRespaldos.TabIndex = 5;
+            this.btnRespaldos.Text = "Respaldos";
+            this.btnRespaldos.UseVisualStyleBackColor = false;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Location = new System.Drawing.Point(80, 450);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(297, 44);
+            this.btnReportes.TabIndex = 4;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = false;
+            // 
+            // btnCRUD
+            // 
+            this.btnCRUD.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnCRUD.FlatAppearance.BorderSize = 0;
+            this.btnCRUD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCRUD.Location = new System.Drawing.Point(80, 350);
+            this.btnCRUD.Name = "btnCRUD";
+            this.btnCRUD.Size = new System.Drawing.Size(297, 44);
+            this.btnCRUD.TabIndex = 3;
+            this.btnCRUD.Text = "CRUD";
+            this.btnCRUD.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Opciones";
             // 
             // btnMostrarEsconderSideBar
             // 
@@ -183,6 +258,350 @@
             this.btnMostrarEsconderSideBar.UseVisualStyleBackColor = false;
             this.btnMostrarEsconderSideBar.Click += new System.EventHandler(this.btnMostrarEsconderSideBar_Click);
             // 
+            // panelCardUsuarios
+            // 
+            this.panelCardUsuarios.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardUsuarios.Controls.Add(this.btnCardUser);
+            this.panelCardUsuarios.Controls.Add(this.pbCardUser);
+            this.panelCardUsuarios.Controls.Add(this.label2);
+            this.panelCardUsuarios.Location = new System.Drawing.Point(135, 78);
+            this.panelCardUsuarios.Name = "panelCardUsuarios";
+            this.panelCardUsuarios.Size = new System.Drawing.Size(506, 306);
+            this.panelCardUsuarios.TabIndex = 1;
+            this.panelCardUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnCardUser
+            // 
+            this.btnCardUser.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardUser.FlatAppearance.BorderSize = 0;
+            this.btnCardUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardUser.Location = new System.Drawing.Point(57, 233);
+            this.btnCardUser.Name = "btnCardUser";
+            this.btnCardUser.Size = new System.Drawing.Size(390, 44);
+            this.btnCardUser.TabIndex = 17;
+            this.btnCardUser.Text = "Acceder a Usuarios";
+            this.btnCardUser.UseVisualStyleBackColor = false;
+            this.btnCardUser.Click += new System.EventHandler(this.btnCardUser_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(161, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 43);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "U S U A R I O S";
+            // 
+            // panelCardCRUD
+            // 
+            this.panelCardCRUD.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardCRUD.Controls.Add(this.btnCardCRUD);
+            this.panelCardCRUD.Controls.Add(this.pbCardCRUD);
+            this.panelCardCRUD.Controls.Add(this.label3);
+            this.panelCardCRUD.Location = new System.Drawing.Point(756, 78);
+            this.panelCardCRUD.Name = "panelCardCRUD";
+            this.panelCardCRUD.Size = new System.Drawing.Size(506, 306);
+            this.panelCardCRUD.TabIndex = 18;
+            this.panelCardCRUD.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCardCRUD_Paint);
+            // 
+            // btnCardCRUD
+            // 
+            this.btnCardCRUD.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardCRUD.FlatAppearance.BorderSize = 0;
+            this.btnCardCRUD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardCRUD.Location = new System.Drawing.Point(57, 233);
+            this.btnCardCRUD.Name = "btnCardCRUD";
+            this.btnCardCRUD.Size = new System.Drawing.Size(390, 44);
+            this.btnCardCRUD.TabIndex = 17;
+            this.btnCardCRUD.Text = "Acceder a CRUD";
+            this.btnCardCRUD.UseVisualStyleBackColor = false;
+            this.btnCardCRUD.Click += new System.EventHandler(this.btnCardCRUD_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(200, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 43);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "C R U D";
+            // 
+            // panelCardReportes
+            // 
+            this.panelCardReportes.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardReportes.Controls.Add(this.btnCardReportes);
+            this.panelCardReportes.Controls.Add(this.pbCardReportes);
+            this.panelCardReportes.Controls.Add(this.label5);
+            this.panelCardReportes.Location = new System.Drawing.Point(135, 409);
+            this.panelCardReportes.Name = "panelCardReportes";
+            this.panelCardReportes.Size = new System.Drawing.Size(506, 306);
+            this.panelCardReportes.TabIndex = 19;
+            this.panelCardReportes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCardReportes_Paint);
+            // 
+            // btnCardReportes
+            // 
+            this.btnCardReportes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardReportes.FlatAppearance.BorderSize = 0;
+            this.btnCardReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardReportes.Location = new System.Drawing.Point(57, 233);
+            this.btnCardReportes.Name = "btnCardReportes";
+            this.btnCardReportes.Size = new System.Drawing.Size(390, 44);
+            this.btnCardReportes.TabIndex = 17;
+            this.btnCardReportes.Text = "Acceder a Reportes";
+            this.btnCardReportes.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(161, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(186, 43);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "R E P O R T E S";
+            // 
+            // panelCardRespaldos
+            // 
+            this.panelCardRespaldos.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardRespaldos.Controls.Add(this.btnCardRespaldos);
+            this.panelCardRespaldos.Controls.Add(this.pbCardRespaldos);
+            this.panelCardRespaldos.Controls.Add(this.label4);
+            this.panelCardRespaldos.Location = new System.Drawing.Point(756, 409);
+            this.panelCardRespaldos.Name = "panelCardRespaldos";
+            this.panelCardRespaldos.Size = new System.Drawing.Size(506, 306);
+            this.panelCardRespaldos.TabIndex = 20;
+            this.panelCardRespaldos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCardRespaldos_Paint);
+            // 
+            // btnCardRespaldos
+            // 
+            this.btnCardRespaldos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardRespaldos.FlatAppearance.BorderSize = 0;
+            this.btnCardRespaldos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardRespaldos.Location = new System.Drawing.Point(57, 233);
+            this.btnCardRespaldos.Name = "btnCardRespaldos";
+            this.btnCardRespaldos.Size = new System.Drawing.Size(390, 44);
+            this.btnCardRespaldos.TabIndex = 17;
+            this.btnCardRespaldos.Text = "Acceder a Respaldos";
+            this.btnCardRespaldos.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(149, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 43);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "R E S P A L D O S";
+            // 
+            // PanelContenido
+            // 
+            this.PanelContenido.AutoScroll = true;
+            this.PanelContenido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PanelContenido.Controls.Add(this.PanelPredictivo);
+            this.PanelContenido.Controls.Add(this.panelCardAnalisis);
+            this.PanelContenido.Controls.Add(this.label8);
+            this.PanelContenido.Controls.Add(this.panelCardRespaldos);
+            this.PanelContenido.Controls.Add(this.panelCardReportes);
+            this.PanelContenido.Controls.Add(this.panelCardCRUD);
+            this.PanelContenido.Controls.Add(this.panelCardUsuarios);
+            this.PanelContenido.Controls.Add(this.btnMostrarEsconderSideBar);
+            this.PanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenido.Location = new System.Drawing.Point(429, 0);
+            this.PanelContenido.Name = "PanelContenido";
+            this.PanelContenido.Size = new System.Drawing.Size(1341, 1317);
+            this.PanelContenido.TabIndex = 1;
+            // 
+            // PanelPredictivo
+            // 
+            this.PanelPredictivo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PanelPredictivo.Controls.Add(this.btnCardPredictivo);
+            this.PanelPredictivo.Controls.Add(this.pbCardPredictivo);
+            this.PanelPredictivo.Controls.Add(this.label6);
+            this.PanelPredictivo.Location = new System.Drawing.Point(756, 741);
+            this.PanelPredictivo.Name = "PanelPredictivo";
+            this.PanelPredictivo.Size = new System.Drawing.Size(506, 306);
+            this.PanelPredictivo.TabIndex = 26;
+            this.PanelPredictivo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPredictivo_Paint);
+            // 
+            // btnCardPredictivo
+            // 
+            this.btnCardPredictivo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardPredictivo.FlatAppearance.BorderSize = 0;
+            this.btnCardPredictivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardPredictivo.Location = new System.Drawing.Point(57, 233);
+            this.btnCardPredictivo.Name = "btnCardPredictivo";
+            this.btnCardPredictivo.Size = new System.Drawing.Size(390, 44);
+            this.btnCardPredictivo.TabIndex = 17;
+            this.btnCardPredictivo.Text = "Acceder a Análisis Predicitvo";
+            this.btnCardPredictivo.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(54, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(393, 43);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "A N Á L I S I S  P R E D I C T I V O";
+            // 
+            // panelCardAnalisis
+            // 
+            this.panelCardAnalisis.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardAnalisis.Controls.Add(this.btnCardAnalisis);
+            this.panelCardAnalisis.Controls.Add(this.pbCardAnalisis);
+            this.panelCardAnalisis.Controls.Add(this.label7);
+            this.panelCardAnalisis.Location = new System.Drawing.Point(135, 741);
+            this.panelCardAnalisis.Name = "panelCardAnalisis";
+            this.panelCardAnalisis.Size = new System.Drawing.Size(506, 306);
+            this.panelCardAnalisis.TabIndex = 25;
+            this.panelCardAnalisis.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCardAnalisis_Paint);
+            // 
+            // btnCardAnalisis
+            // 
+            this.btnCardAnalisis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardAnalisis.FlatAppearance.BorderSize = 0;
+            this.btnCardAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardAnalisis.Location = new System.Drawing.Point(57, 233);
+            this.btnCardAnalisis.Name = "btnCardAnalisis";
+            this.btnCardAnalisis.Size = new System.Drawing.Size(390, 44);
+            this.btnCardAnalisis.TabIndex = 17;
+            this.btnCardAnalisis.Text = "Acceder a Análisis de Datos";
+            this.btnCardAnalisis.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(76, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(349, 43);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "A N Á L I S I S  D E  D A T O S";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Engravers MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(489, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(382, 37);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "D A S H B O A R D";
+            // 
+            // pbCardPredictivo
+            // 
+            this.pbCardPredictivo.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardPredictivo.Location = new System.Drawing.Point(96, 55);
+            this.pbCardPredictivo.Name = "pbCardPredictivo";
+            this.pbCardPredictivo.Size = new System.Drawing.Size(308, 165);
+            this.pbCardPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardPredictivo.TabIndex = 16;
+            this.pbCardPredictivo.TabStop = false;
+            // 
+            // pbCardAnalisis
+            // 
+            this.pbCardAnalisis.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardAnalisis.Location = new System.Drawing.Point(96, 55);
+            this.pbCardAnalisis.Name = "pbCardAnalisis";
+            this.pbCardAnalisis.Size = new System.Drawing.Size(308, 165);
+            this.pbCardAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardAnalisis.TabIndex = 16;
+            this.pbCardAnalisis.TabStop = false;
+            // 
+            // pbCardRespaldos
+            // 
+            this.pbCardRespaldos.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardRespaldos.Location = new System.Drawing.Point(96, 55);
+            this.pbCardRespaldos.Name = "pbCardRespaldos";
+            this.pbCardRespaldos.Size = new System.Drawing.Size(308, 165);
+            this.pbCardRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardRespaldos.TabIndex = 16;
+            this.pbCardRespaldos.TabStop = false;
+            // 
+            // pbCardReportes
+            // 
+            this.pbCardReportes.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardReportes.Location = new System.Drawing.Point(96, 55);
+            this.pbCardReportes.Name = "pbCardReportes";
+            this.pbCardReportes.Size = new System.Drawing.Size(308, 165);
+            this.pbCardReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardReportes.TabIndex = 16;
+            this.pbCardReportes.TabStop = false;
+            // 
+            // pbCardCRUD
+            // 
+            this.pbCardCRUD.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardCRUD.Location = new System.Drawing.Point(96, 55);
+            this.pbCardCRUD.Name = "pbCardCRUD";
+            this.pbCardCRUD.Size = new System.Drawing.Size(308, 165);
+            this.pbCardCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardCRUD.TabIndex = 16;
+            this.pbCardCRUD.TabStop = false;
+            // 
+            // pbCardUser
+            // 
+            this.pbCardUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardUser.Location = new System.Drawing.Point(96, 55);
+            this.pbCardUser.Name = "pbCardUser";
+            this.pbCardUser.Size = new System.Drawing.Size(308, 165);
+            this.pbCardUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardUser.TabIndex = 16;
+            this.pbCardUser.TabStop = false;
+            // 
+            // pbPredictivo
+            // 
+            this.pbPredictivo.BackColor = System.Drawing.Color.Transparent;
+            this.pbPredictivo.Location = new System.Drawing.Point(4, 786);
+            this.pbPredictivo.Name = "pbPredictivo";
+            this.pbPredictivo.Size = new System.Drawing.Size(70, 44);
+            this.pbPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPredictivo.TabIndex = 13;
+            this.pbPredictivo.TabStop = false;
+            // 
+            // pbAnalisis
+            // 
+            this.pbAnalisis.BackColor = System.Drawing.Color.Transparent;
+            this.pbAnalisis.Location = new System.Drawing.Point(4, 671);
+            this.pbAnalisis.Name = "pbAnalisis";
+            this.pbAnalisis.Size = new System.Drawing.Size(70, 44);
+            this.pbAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAnalisis.TabIndex = 12;
+            this.pbAnalisis.TabStop = false;
+            // 
+            // pbRespaldos
+            // 
+            this.pbRespaldos.BackColor = System.Drawing.Color.Transparent;
+            this.pbRespaldos.Location = new System.Drawing.Point(4, 561);
+            this.pbRespaldos.Name = "pbRespaldos";
+            this.pbRespaldos.Size = new System.Drawing.Size(70, 44);
+            this.pbRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRespaldos.TabIndex = 11;
+            this.pbRespaldos.TabStop = false;
+            // 
+            // pbReportes
+            // 
+            this.pbReportes.BackColor = System.Drawing.Color.Transparent;
+            this.pbReportes.Location = new System.Drawing.Point(4, 450);
+            this.pbReportes.Name = "pbReportes";
+            this.pbReportes.Size = new System.Drawing.Size(70, 44);
+            this.pbReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReportes.TabIndex = 10;
+            this.pbReportes.TabStop = false;
+            // 
+            // pbCRUD
+            // 
+            this.pbCRUD.BackColor = System.Drawing.Color.Transparent;
+            this.pbCRUD.Location = new System.Drawing.Point(4, 350);
+            this.pbCRUD.Name = "pbCRUD";
+            this.pbCRUD.Size = new System.Drawing.Size(70, 44);
+            this.pbCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCRUD.TabIndex = 9;
+            this.pbCRUD.TabStop = false;
+            // 
             // pbUser
             // 
             this.pbUser.BackColor = System.Drawing.Color.Transparent;
@@ -193,32 +612,12 @@
             this.pbUser.TabIndex = 8;
             this.pbUser.TabStop = false;
             // 
-            // panelCardUsuarios
-            // 
-            this.panelCardUsuarios.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCardUsuarios.Controls.Add(this.label2);
-            this.panelCardUsuarios.Location = new System.Drawing.Point(131, 32);
-            this.panelCardUsuarios.Name = "panelCardUsuarios";
-            this.panelCardUsuarios.Size = new System.Drawing.Size(506, 277);
-            this.panelCardUsuarios.TabIndex = 1;
-            this.panelCardUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 56);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "U S U A R I O S";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1770, 1048);
+            this.ClientSize = new System.Drawing.Size(1770, 1317);
             this.Controls.Add(this.PanelContenido);
             this.Controls.Add(this.PanelSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -229,10 +628,34 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.PanelSidebar.ResumeLayout(false);
             this.PanelSidebar.PerformLayout();
-            this.PanelContenido.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panelCardUsuarios.ResumeLayout(false);
             this.panelCardUsuarios.PerformLayout();
+            this.panelCardCRUD.ResumeLayout(false);
+            this.panelCardCRUD.PerformLayout();
+            this.panelCardReportes.ResumeLayout(false);
+            this.panelCardReportes.PerformLayout();
+            this.panelCardRespaldos.ResumeLayout(false);
+            this.panelCardRespaldos.PerformLayout();
+            this.PanelContenido.ResumeLayout(false);
+            this.PanelContenido.PerformLayout();
+            this.PanelPredictivo.ResumeLayout(false);
+            this.PanelPredictivo.PerformLayout();
+            this.panelCardAnalisis.ResumeLayout(false);
+            this.panelCardAnalisis.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnalisis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRespaldos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCRUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,10 +670,41 @@
         private System.Windows.Forms.Button btnAnalisis;
         private System.Windows.Forms.Button btnRespaldos;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Panel PanelContenido;
-        private System.Windows.Forms.Button btnMostrarEsconderSideBar;
         private System.Windows.Forms.PictureBox pbUser;
+        private System.Windows.Forms.PictureBox pbPredictivo;
+        private System.Windows.Forms.PictureBox pbAnalisis;
+        private System.Windows.Forms.PictureBox pbRespaldos;
+        private System.Windows.Forms.PictureBox pbReportes;
+        private System.Windows.Forms.PictureBox pbCRUD;
+        private System.Windows.Forms.Button btnCerrarSesión;
+        private System.Windows.Forms.Label lblCerrarSesion;
+        private System.Windows.Forms.Button btnMostrarEsconderSideBar;
         private System.Windows.Forms.Panel panelCardUsuarios;
+        private System.Windows.Forms.Button btnCardUser;
+        private System.Windows.Forms.PictureBox pbCardUser;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelCardCRUD;
+        private System.Windows.Forms.Button btnCardCRUD;
+        private System.Windows.Forms.PictureBox pbCardCRUD;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelCardReportes;
+        private System.Windows.Forms.Button btnCardReportes;
+        private System.Windows.Forms.PictureBox pbCardReportes;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelCardRespaldos;
+        private System.Windows.Forms.Button btnCardRespaldos;
+        private System.Windows.Forms.PictureBox pbCardRespaldos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel PanelContenido;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel PanelPredictivo;
+        private System.Windows.Forms.Button btnCardPredictivo;
+        private System.Windows.Forms.PictureBox pbCardPredictivo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelCardAnalisis;
+        private System.Windows.Forms.Button btnCardAnalisis;
+        private System.Windows.Forms.PictureBox pbCardAnalisis;
+        private System.Windows.Forms.Label label7;
     }
 }
