@@ -176,5 +176,10 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
             Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros();
             crudLibros.ShowDialog();
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

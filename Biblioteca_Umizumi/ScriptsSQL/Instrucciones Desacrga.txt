@@ -1,0 +1,7 @@
+Descargar ClosedXML y ITextSharp para PDF's y Excel's
+
+1. En la barra de tareas buscar proyecto, luego buscar la opción Administrador de Paquetes Nuget
+
+2. Buscar ClosedXML e instalar
+
+3. Buscar ITextSharp e instalar

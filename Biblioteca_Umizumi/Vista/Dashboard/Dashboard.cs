@@ -10,14 +10,18 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using Biblioteca_Umizumi.Vista.Autenticacion;
+using Biblioteca_Umizumi.Modelo;
+using BibliotecaUmizumi.Controlador;
 
 namespace Biblioteca_Umizumi.Vista.Dashboard
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        private int idUsuario; 
+        public Dashboard(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
 
             // Iconos sidebar
             pbUser.Image = Properties.Resources.user1;
@@ -38,6 +42,11 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
 
 
         }
+        public Dashboard() // Constructor sin argumentos
+        {
+            InitializeComponent();
+        }
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -75,9 +84,14 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             RedondearPanel(panelCardUsuarios, 10);
         }
 
+
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
+            SesionController.RegistrarCierreSesion(idUsuario);
 
+            this.Hide();
+            new FormLogin().ShowDialog();
+            this.Close();
         }
 
         private void panelCardCRUD_Paint(object sender, PaintEventArgs e)
@@ -116,8 +130,15 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
         private void btnCardCRUD_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros();
+            Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros(idUsuario);
             crudLibros.ShowDialog();
+        }
+
+        private void btnCardReportes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes();
+            menuReportes.ShowDialog(); ;
         }
     }
 }

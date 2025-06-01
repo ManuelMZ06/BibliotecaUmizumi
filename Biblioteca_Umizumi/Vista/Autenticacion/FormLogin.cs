@@ -57,7 +57,8 @@ namespace Biblioteca_Umizumi.Vista.Autenticacion
 
                     // Redireccionar al dashboard
                     this.Hide();
-                    Vista.Dashboard.Dashboard tableroPrincipal = new Vista.Dashboard.Dashboard(); // Se pasa el ID del usuario al Dashboard
+                    Vista.Dashboard.Dashboard tableroPrincipal = new Vista.Dashboard.Dashboard(idUsuario);
+                    ; // Se pasa el ID del usuario al Dashboard
                     tableroPrincipal.ShowDialog();
                     this.Close();
                 }

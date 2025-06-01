@@ -34,6 +34,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
+            this.pbPredictivo = new System.Windows.Forms.PictureBox();
+            this.pbAnalisis = new System.Windows.Forms.PictureBox();
+            this.pbRespaldos = new System.Windows.Forms.PictureBox();
+            this.pbReportes = new System.Windows.Forms.PictureBox();
+            this.pbCRUD = new System.Windows.Forms.PictureBox();
+            this.pbUser = new System.Windows.Forms.PictureBox();
             this.btnPredictivo = new System.Windows.Forms.Button();
             this.btnAnalisis = new System.Windows.Forms.Button();
             this.btnRespaldos = new System.Windows.Forms.Button();
@@ -43,57 +49,51 @@
             this.btnMostrarEsconderSideBar = new System.Windows.Forms.Button();
             this.panelCardUsuarios = new System.Windows.Forms.Panel();
             this.btnCardUser = new System.Windows.Forms.Button();
+            this.pbCardUser = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCardCRUD = new System.Windows.Forms.Panel();
             this.btnCardCRUD = new System.Windows.Forms.Button();
+            this.pbCardCRUD = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelCardReportes = new System.Windows.Forms.Panel();
             this.btnCardReportes = new System.Windows.Forms.Button();
+            this.pbCardReportes = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelCardRespaldos = new System.Windows.Forms.Panel();
             this.btnCardRespaldos = new System.Windows.Forms.Button();
+            this.pbCardRespaldos = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PanelContenido = new System.Windows.Forms.Panel();
             this.PanelPredictivo = new System.Windows.Forms.Panel();
             this.btnCardPredictivo = new System.Windows.Forms.Button();
+            this.pbCardPredictivo = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panelCardAnalisis = new System.Windows.Forms.Panel();
             this.btnCardAnalisis = new System.Windows.Forms.Button();
+            this.pbCardAnalisis = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pbCardPredictivo = new System.Windows.Forms.PictureBox();
-            this.pbCardAnalisis = new System.Windows.Forms.PictureBox();
-            this.pbCardRespaldos = new System.Windows.Forms.PictureBox();
-            this.pbCardReportes = new System.Windows.Forms.PictureBox();
-            this.pbCardCRUD = new System.Windows.Forms.PictureBox();
-            this.pbCardUser = new System.Windows.Forms.PictureBox();
-            this.pbPredictivo = new System.Windows.Forms.PictureBox();
-            this.pbAnalisis = new System.Windows.Forms.PictureBox();
-            this.pbRespaldos = new System.Windows.Forms.PictureBox();
-            this.pbReportes = new System.Windows.Forms.PictureBox();
-            this.pbCRUD = new System.Windows.Forms.PictureBox();
-            this.pbUser = new System.Windows.Forms.PictureBox();
             this.PanelSidebar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panelCardUsuarios.SuspendLayout();
-            this.panelCardCRUD.SuspendLayout();
-            this.panelCardReportes.SuspendLayout();
-            this.panelCardRespaldos.SuspendLayout();
-            this.PanelContenido.SuspendLayout();
-            this.PanelPredictivo.SuspendLayout();
-            this.panelCardAnalisis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalisis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRespaldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCRUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            this.panelCardUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).BeginInit();
+            this.panelCardCRUD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).BeginInit();
+            this.panelCardReportes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).BeginInit();
+            this.panelCardRespaldos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).BeginInit();
+            this.PanelContenido.SuspendLayout();
+            this.PanelPredictivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).BeginInit();
+            this.panelCardAnalisis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSidebar
@@ -173,6 +173,66 @@
             this.lblCerrarSesion.Size = new System.Drawing.Size(153, 36);
             this.lblCerrarSesion.TabIndex = 15;
             this.lblCerrarSesion.Text = "Cerrar Sesion";
+            // 
+            // pbPredictivo
+            // 
+            this.pbPredictivo.BackColor = System.Drawing.Color.Transparent;
+            this.pbPredictivo.Location = new System.Drawing.Point(4, 786);
+            this.pbPredictivo.Name = "pbPredictivo";
+            this.pbPredictivo.Size = new System.Drawing.Size(70, 44);
+            this.pbPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPredictivo.TabIndex = 13;
+            this.pbPredictivo.TabStop = false;
+            // 
+            // pbAnalisis
+            // 
+            this.pbAnalisis.BackColor = System.Drawing.Color.Transparent;
+            this.pbAnalisis.Location = new System.Drawing.Point(4, 671);
+            this.pbAnalisis.Name = "pbAnalisis";
+            this.pbAnalisis.Size = new System.Drawing.Size(70, 44);
+            this.pbAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAnalisis.TabIndex = 12;
+            this.pbAnalisis.TabStop = false;
+            // 
+            // pbRespaldos
+            // 
+            this.pbRespaldos.BackColor = System.Drawing.Color.Transparent;
+            this.pbRespaldos.Location = new System.Drawing.Point(4, 561);
+            this.pbRespaldos.Name = "pbRespaldos";
+            this.pbRespaldos.Size = new System.Drawing.Size(70, 44);
+            this.pbRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRespaldos.TabIndex = 11;
+            this.pbRespaldos.TabStop = false;
+            // 
+            // pbReportes
+            // 
+            this.pbReportes.BackColor = System.Drawing.Color.Transparent;
+            this.pbReportes.Location = new System.Drawing.Point(4, 450);
+            this.pbReportes.Name = "pbReportes";
+            this.pbReportes.Size = new System.Drawing.Size(70, 44);
+            this.pbReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReportes.TabIndex = 10;
+            this.pbReportes.TabStop = false;
+            // 
+            // pbCRUD
+            // 
+            this.pbCRUD.BackColor = System.Drawing.Color.Transparent;
+            this.pbCRUD.Location = new System.Drawing.Point(4, 350);
+            this.pbCRUD.Name = "pbCRUD";
+            this.pbCRUD.Size = new System.Drawing.Size(70, 44);
+            this.pbCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCRUD.TabIndex = 9;
+            this.pbCRUD.TabStop = false;
+            // 
+            // pbUser
+            // 
+            this.pbUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbUser.Location = new System.Drawing.Point(4, 249);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(70, 44);
+            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUser.TabIndex = 8;
+            this.pbUser.TabStop = false;
             // 
             // btnPredictivo
             // 
@@ -283,6 +343,16 @@
             this.btnCardUser.UseVisualStyleBackColor = false;
             this.btnCardUser.Click += new System.EventHandler(this.btnCardUser_Click);
             // 
+            // pbCardUser
+            // 
+            this.pbCardUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardUser.Location = new System.Drawing.Point(96, 55);
+            this.pbCardUser.Name = "pbCardUser";
+            this.pbCardUser.Size = new System.Drawing.Size(308, 165);
+            this.pbCardUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardUser.TabIndex = 16;
+            this.pbCardUser.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -318,6 +388,16 @@
             this.btnCardCRUD.UseVisualStyleBackColor = false;
             this.btnCardCRUD.Click += new System.EventHandler(this.btnCardCRUD_Click);
             // 
+            // pbCardCRUD
+            // 
+            this.pbCardCRUD.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardCRUD.Location = new System.Drawing.Point(96, 55);
+            this.pbCardCRUD.Name = "pbCardCRUD";
+            this.pbCardCRUD.Size = new System.Drawing.Size(308, 165);
+            this.pbCardCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardCRUD.TabIndex = 16;
+            this.pbCardCRUD.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -351,6 +431,17 @@
             this.btnCardReportes.TabIndex = 17;
             this.btnCardReportes.Text = "Acceder a Reportes";
             this.btnCardReportes.UseVisualStyleBackColor = false;
+            this.btnCardReportes.Click += new System.EventHandler(this.btnCardReportes_Click);
+            // 
+            // pbCardReportes
+            // 
+            this.pbCardReportes.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardReportes.Location = new System.Drawing.Point(96, 55);
+            this.pbCardReportes.Name = "pbCardReportes";
+            this.pbCardReportes.Size = new System.Drawing.Size(308, 165);
+            this.pbCardReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardReportes.TabIndex = 16;
+            this.pbCardReportes.TabStop = false;
             // 
             // label5
             // 
@@ -385,6 +476,16 @@
             this.btnCardRespaldos.TabIndex = 17;
             this.btnCardRespaldos.Text = "Acceder a Respaldos";
             this.btnCardRespaldos.UseVisualStyleBackColor = false;
+            // 
+            // pbCardRespaldos
+            // 
+            this.pbCardRespaldos.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardRespaldos.Location = new System.Drawing.Point(96, 55);
+            this.pbCardRespaldos.Name = "pbCardRespaldos";
+            this.pbCardRespaldos.Size = new System.Drawing.Size(308, 165);
+            this.pbCardRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardRespaldos.TabIndex = 16;
+            this.pbCardRespaldos.TabStop = false;
             // 
             // label4
             // 
@@ -438,6 +539,16 @@
             this.btnCardPredictivo.Text = "Acceder a Análisis Predicitvo";
             this.btnCardPredictivo.UseVisualStyleBackColor = false;
             // 
+            // pbCardPredictivo
+            // 
+            this.pbCardPredictivo.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardPredictivo.Location = new System.Drawing.Point(96, 55);
+            this.pbCardPredictivo.Name = "pbCardPredictivo";
+            this.pbCardPredictivo.Size = new System.Drawing.Size(308, 165);
+            this.pbCardPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardPredictivo.TabIndex = 16;
+            this.pbCardPredictivo.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -472,6 +583,16 @@
             this.btnCardAnalisis.Text = "Acceder a Análisis de Datos";
             this.btnCardAnalisis.UseVisualStyleBackColor = false;
             // 
+            // pbCardAnalisis
+            // 
+            this.pbCardAnalisis.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardAnalisis.Location = new System.Drawing.Point(96, 55);
+            this.pbCardAnalisis.Name = "pbCardAnalisis";
+            this.pbCardAnalisis.Size = new System.Drawing.Size(308, 165);
+            this.pbCardAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardAnalisis.TabIndex = 16;
+            this.pbCardAnalisis.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -492,126 +613,6 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "D A S H B O A R D";
             // 
-            // pbCardPredictivo
-            // 
-            this.pbCardPredictivo.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardPredictivo.Location = new System.Drawing.Point(96, 55);
-            this.pbCardPredictivo.Name = "pbCardPredictivo";
-            this.pbCardPredictivo.Size = new System.Drawing.Size(308, 165);
-            this.pbCardPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardPredictivo.TabIndex = 16;
-            this.pbCardPredictivo.TabStop = false;
-            // 
-            // pbCardAnalisis
-            // 
-            this.pbCardAnalisis.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardAnalisis.Location = new System.Drawing.Point(96, 55);
-            this.pbCardAnalisis.Name = "pbCardAnalisis";
-            this.pbCardAnalisis.Size = new System.Drawing.Size(308, 165);
-            this.pbCardAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardAnalisis.TabIndex = 16;
-            this.pbCardAnalisis.TabStop = false;
-            // 
-            // pbCardRespaldos
-            // 
-            this.pbCardRespaldos.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardRespaldos.Location = new System.Drawing.Point(96, 55);
-            this.pbCardRespaldos.Name = "pbCardRespaldos";
-            this.pbCardRespaldos.Size = new System.Drawing.Size(308, 165);
-            this.pbCardRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardRespaldos.TabIndex = 16;
-            this.pbCardRespaldos.TabStop = false;
-            // 
-            // pbCardReportes
-            // 
-            this.pbCardReportes.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardReportes.Location = new System.Drawing.Point(96, 55);
-            this.pbCardReportes.Name = "pbCardReportes";
-            this.pbCardReportes.Size = new System.Drawing.Size(308, 165);
-            this.pbCardReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardReportes.TabIndex = 16;
-            this.pbCardReportes.TabStop = false;
-            // 
-            // pbCardCRUD
-            // 
-            this.pbCardCRUD.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardCRUD.Location = new System.Drawing.Point(96, 55);
-            this.pbCardCRUD.Name = "pbCardCRUD";
-            this.pbCardCRUD.Size = new System.Drawing.Size(308, 165);
-            this.pbCardCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardCRUD.TabIndex = 16;
-            this.pbCardCRUD.TabStop = false;
-            // 
-            // pbCardUser
-            // 
-            this.pbCardUser.BackColor = System.Drawing.Color.Transparent;
-            this.pbCardUser.Location = new System.Drawing.Point(96, 55);
-            this.pbCardUser.Name = "pbCardUser";
-            this.pbCardUser.Size = new System.Drawing.Size(308, 165);
-            this.pbCardUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCardUser.TabIndex = 16;
-            this.pbCardUser.TabStop = false;
-            // 
-            // pbPredictivo
-            // 
-            this.pbPredictivo.BackColor = System.Drawing.Color.Transparent;
-            this.pbPredictivo.Location = new System.Drawing.Point(4, 786);
-            this.pbPredictivo.Name = "pbPredictivo";
-            this.pbPredictivo.Size = new System.Drawing.Size(70, 44);
-            this.pbPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPredictivo.TabIndex = 13;
-            this.pbPredictivo.TabStop = false;
-            // 
-            // pbAnalisis
-            // 
-            this.pbAnalisis.BackColor = System.Drawing.Color.Transparent;
-            this.pbAnalisis.Location = new System.Drawing.Point(4, 671);
-            this.pbAnalisis.Name = "pbAnalisis";
-            this.pbAnalisis.Size = new System.Drawing.Size(70, 44);
-            this.pbAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAnalisis.TabIndex = 12;
-            this.pbAnalisis.TabStop = false;
-            // 
-            // pbRespaldos
-            // 
-            this.pbRespaldos.BackColor = System.Drawing.Color.Transparent;
-            this.pbRespaldos.Location = new System.Drawing.Point(4, 561);
-            this.pbRespaldos.Name = "pbRespaldos";
-            this.pbRespaldos.Size = new System.Drawing.Size(70, 44);
-            this.pbRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRespaldos.TabIndex = 11;
-            this.pbRespaldos.TabStop = false;
-            // 
-            // pbReportes
-            // 
-            this.pbReportes.BackColor = System.Drawing.Color.Transparent;
-            this.pbReportes.Location = new System.Drawing.Point(4, 450);
-            this.pbReportes.Name = "pbReportes";
-            this.pbReportes.Size = new System.Drawing.Size(70, 44);
-            this.pbReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbReportes.TabIndex = 10;
-            this.pbReportes.TabStop = false;
-            // 
-            // pbCRUD
-            // 
-            this.pbCRUD.BackColor = System.Drawing.Color.Transparent;
-            this.pbCRUD.Location = new System.Drawing.Point(4, 350);
-            this.pbCRUD.Name = "pbCRUD";
-            this.pbCRUD.Size = new System.Drawing.Size(70, 44);
-            this.pbCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCRUD.TabIndex = 9;
-            this.pbCRUD.TabStop = false;
-            // 
-            // pbUser
-            // 
-            this.pbUser.BackColor = System.Drawing.Color.Transparent;
-            this.pbUser.Location = new System.Drawing.Point(4, 249);
-            this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(70, 44);
-            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUser.TabIndex = 8;
-            this.pbUser.TabStop = false;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -630,32 +631,32 @@
             this.PanelSidebar.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelCardUsuarios.ResumeLayout(false);
-            this.panelCardUsuarios.PerformLayout();
-            this.panelCardCRUD.ResumeLayout(false);
-            this.panelCardCRUD.PerformLayout();
-            this.panelCardReportes.ResumeLayout(false);
-            this.panelCardReportes.PerformLayout();
-            this.panelCardRespaldos.ResumeLayout(false);
-            this.panelCardRespaldos.PerformLayout();
-            this.PanelContenido.ResumeLayout(false);
-            this.PanelContenido.PerformLayout();
-            this.PanelPredictivo.ResumeLayout(false);
-            this.PanelPredictivo.PerformLayout();
-            this.panelCardAnalisis.ResumeLayout(false);
-            this.panelCardAnalisis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalisis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRespaldos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCRUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            this.panelCardUsuarios.ResumeLayout(false);
+            this.panelCardUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardUser)).EndInit();
+            this.panelCardCRUD.ResumeLayout(false);
+            this.panelCardCRUD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardCRUD)).EndInit();
+            this.panelCardReportes.ResumeLayout(false);
+            this.panelCardReportes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardReportes)).EndInit();
+            this.panelCardRespaldos.ResumeLayout(false);
+            this.panelCardRespaldos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).EndInit();
+            this.PanelContenido.ResumeLayout(false);
+            this.PanelContenido.PerformLayout();
+            this.PanelPredictivo.ResumeLayout(false);
+            this.PanelPredictivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).EndInit();
+            this.panelCardAnalisis.ResumeLayout(false);
+            this.panelCardAnalisis.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardAnalisis)).EndInit();
             this.ResumeLayout(false);
 
         }

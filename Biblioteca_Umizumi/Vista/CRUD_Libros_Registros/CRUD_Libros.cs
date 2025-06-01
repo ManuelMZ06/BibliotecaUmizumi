@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Biblioteca_Umizumi.Modelo;
 using Biblioteca_Umizumi.Controlador;
 using System.Linq;
+using BibliotecaUmizumi.Controlador;
 
 namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
 {
@@ -13,11 +14,18 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         private AutorController autorController = new AutorController();
         private CategoriaController categoriaController = new CategoriaController();
 
+        public CRUD_Libros(int idUsuario)
+        {
+            InitializeComponent();
+            this.idUsuario = idUsuario;
+        }
+
         public CRUD_Libros()
         {
             InitializeComponent();
         }
 
+        public int idUsuario;
         private void CRUD_Libros_Load(object sender, EventArgs e)
         {
             cbEstado.Items.AddRange(new string[] { "Activado", "Desactivado" });
@@ -106,6 +114,9 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
             CargarLibros();
             LimpiarCampos();
             MessageBox.Show("Libro agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            BitacoraController.RegistrarAccion(idUsuario, "INSERT", "Libros");
+
         }
 
 
@@ -132,6 +143,9 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
                 CargarLibros();
                 LimpiarCampos();
             }
+
+            BitacoraController.RegistrarAccion(idUsuario, "UPDATE", "Libros");
+
         }
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
@@ -143,6 +157,9 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
                 CargarLibros();
                 LimpiarCampos();
             }
+
+            BitacoraController.RegistrarAccion(idUsuario, "DELETE", "Libros");
+
         }
 
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)

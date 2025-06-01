@@ -100,9 +100,10 @@
             this.lblTitulo.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(565, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(278, 42);
+            this.lblTitulo.Size = new System.Drawing.Size(302, 42);
             this.lblTitulo.TabIndex = 8;
-            this.lblTitulo.Text = "Autores & Categoías";
+            this.lblTitulo.Text = "Autores y Categorías";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // btnActulizarCategoria
             // 
@@ -260,9 +261,9 @@
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(16, 9);
+            this.btnRegresar.Location = new System.Drawing.Point(12, 12);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(78, 63);
+            this.btnRegresar.Size = new System.Drawing.Size(78, 65);
             this.btnRegresar.TabIndex = 25;
             this.btnRegresar.Text = "←";
             this.btnRegresar.UseVisualStyleBackColor = true;
