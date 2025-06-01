@@ -44,5 +44,10 @@ namespace Biblioteca_Umizumi.Vista.Reportes
             Vista.Reportes.ReportesBitacoras rBitacoras = new ReportesBitacoras();
             rBitacoras.ShowDialog();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

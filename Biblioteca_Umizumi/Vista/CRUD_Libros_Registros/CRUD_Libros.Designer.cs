@@ -52,6 +52,9 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnAutorCategoria = new System.Windows.Forms.Button();
             this.nudStock = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbProveedor = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStock)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +76,6 @@
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLibros.Location = new System.Drawing.Point(806, 139);
             this.dgvLibros.Name = "dgvLibros";
-            this.dgvLibros.ReadOnly = true;
             this.dgvLibros.RowHeadersWidth = 62;
             this.dgvLibros.RowTemplate.Height = 28;
             this.dgvLibros.Size = new System.Drawing.Size(823, 477);
@@ -140,14 +142,14 @@
             // 
             // txtPrecioCompra
             // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(180, 388);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(180, 458);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(562, 26);
             this.txtPrecioCompra.TabIndex = 10;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(180, 444);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(180, 514);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(562, 26);
             this.txtPrecioVenta.TabIndex = 11;
@@ -158,14 +160,14 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activado",
             "Desactivado"});
-            this.cbEstado.Location = new System.Drawing.Point(180, 502);
+            this.cbEstado.Location = new System.Drawing.Point(180, 572);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(303, 28);
             this.cbEstado.TabIndex = 13;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(180, 556);
+            this.txtDescripcion.Location = new System.Drawing.Point(180, 626);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(562, 222);
@@ -195,7 +197,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 388);
+            this.label4.Location = new System.Drawing.Point(10, 458);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 24);
             this.label4.TabIndex = 18;
@@ -205,7 +207,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 327);
+            this.label5.Location = new System.Drawing.Point(12, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 24);
             this.label5.TabIndex = 19;
@@ -225,7 +227,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 446);
+            this.label7.Location = new System.Drawing.Point(10, 516);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 24);
             this.label7.TabIndex = 21;
@@ -235,7 +237,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 506);
+            this.label8.Location = new System.Drawing.Point(10, 576);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 24);
             this.label8.TabIndex = 22;
@@ -245,7 +247,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 556);
+            this.label9.Location = new System.Drawing.Point(10, 626);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 24);
             this.label9.TabIndex = 23;
@@ -287,7 +289,7 @@
             this.btnAutorCategoria.FlatAppearance.BorderSize = 0;
             this.btnAutorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAutorCategoria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAutorCategoria.Location = new System.Drawing.Point(1124, 661);
+            this.btnAutorCategoria.Location = new System.Drawing.Point(1126, 638);
             this.btnAutorCategoria.Name = "btnAutorCategoria";
             this.btnAutorCategoria.Size = new System.Drawing.Size(217, 42);
             this.btnAutorCategoria.TabIndex = 27;
@@ -297,17 +299,52 @@
             // 
             // nudStock
             // 
-            this.nudStock.Location = new System.Drawing.Point(180, 325);
+            this.nudStock.Location = new System.Drawing.Point(180, 395);
             this.nudStock.Name = "nudStock";
             this.nudStock.Size = new System.Drawing.Size(185, 26);
             this.nudStock.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(1126, 688);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(217, 42);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Ingresar Proveedor";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbProveedor
+            // 
+            this.cbProveedor.FormattingEnabled = true;
+            this.cbProveedor.Location = new System.Drawing.Point(180, 327);
+            this.cbProveedor.Name = "cbProveedor";
+            this.cbProveedor.Size = new System.Drawing.Size(562, 28);
+            this.cbProveedor.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 327);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 24);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Proveedor";
             // 
             // CRUD_Libros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1688, 814);
+            this.ClientSize = new System.Drawing.Size(1688, 884);
+            this.Controls.Add(this.cbProveedor);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.nudStock);
             this.Controls.Add(this.btnAutorCategoria);
             this.Controls.Add(this.btnRegresar);
@@ -369,5 +406,8 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnAutorCategoria;
         private System.Windows.Forms.NumericUpDown nudStock;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbProveedor;
+        private System.Windows.Forms.Label label3;
     }
 }

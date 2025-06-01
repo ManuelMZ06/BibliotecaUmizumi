@@ -23,24 +23,6 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             InitializeComponent();
             this.idUsuario = idUsuario;
 
-            // Iconos sidebar
-            pbUser.Image = Properties.Resources.user1;
-            pbCRUD.Image = Properties.Resources.edit;
-            pbReportes.Image = Properties.Resources.report;
-            pbRespaldos.Image = Properties.Resources.database_management;
-            pbAnalisis.Image = Properties.Resources.data;
-            pbPredictivo.Image = Properties.Resources.ai;
-
-            //Iconos Cards
-            pbCardUser.Image = Properties.Resources.user1;
-            pbCardCRUD.Image = Properties.Resources.edit;
-            pbCardReportes.Image = Properties.Resources.report;
-            pbCardRespaldos.Image = Properties.Resources.database_management;
-            pbCardAnalisis.Image = Properties.Resources.data;
-            pbCardPredictivo.Image = Properties.Resources.ai;
-
-
-
         }
         public Dashboard() // Constructor sin argumentos
         {
@@ -50,7 +32,23 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            // Iconos sidebar
+            pbUser.Image = Properties.Resources.user1;
+            pbCRUD.Image = Properties.Resources.edit;
+            pbReportes.Image = Properties.Resources.report;
+            pbRespaldos.Image = Properties.Resources.database_management;
+            pbAnalisis.Image = Properties.Resources.data;
+            pbPredictivo.Image = Properties.Resources.ai;
+            pbMovimientos.Image = Properties.Resources.people;
 
+            //Iconos Cards
+            pbCardUser.Image = Properties.Resources.user1;
+            pbCardCRUD.Image = Properties.Resources.edit;
+            pbCardReportes.Image = Properties.Resources.report;
+            pbCardRespaldos.Image = Properties.Resources.database_management;
+            pbCardAnalisis.Image = Properties.Resources.data;
+            pbCardPredictivo.Image = Properties.Resources.ai;
+            pbCardMovimientos.Image = Properties.Resources.people;
         }
 
         public void RedondearPanel(Panel panel, int radio)
@@ -139,6 +137,65 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             this.Hide();
             Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes();
             menuReportes.ShowDialog(); ;
+        }
+
+        private void btnCardRespaldos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos();
+            fRespaldos.ShowDialog(); ;
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Usuarios.Usuarios users = new Vista.Usuarios.Usuarios();
+            users.ShowDialog();
+        }
+
+        private void btnCRUD_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros(idUsuario);
+            crudLibros.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes();
+            menuReportes.ShowDialog();
+        }
+
+        private void btnRespaldos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos();
+            fRespaldos.ShowDialog();
+        }
+
+        private void btnAnalisis_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPredictivo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMovimientos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Movimientos.Movimientos movimientos = new Vista.Movimientos.Movimientos(idUsuario);
+            movimientos.ShowDialog();
+        }
+
+        private void btnCardMovimientos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Movimientos.Movimientos movimientos = new Vista.Movimientos.Movimientos(idUsuario);
+            movimientos.ShowDialog();
         }
     }
 }

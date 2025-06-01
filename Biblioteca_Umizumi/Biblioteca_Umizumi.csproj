@@ -91,9 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\AutorController.cs" />
+    <Compile Include="Controlador\BackupController.cs" />
     <Compile Include="Controlador\BitacoraController.cs" />
     <Compile Include="Controlador\CategoriaController.cs" />
     <Compile Include="Controlador\CRUDLibrosController.cs" />
+    <Compile Include="Controlador\MovimientoController.cs" />
+    <Compile Include="Controlador\ProveedorController.cs" />
     <Compile Include="Controlador\ReporteBitacoraAccionesController.cs" />
     <Compile Include="Controlador\ReporteBitacoraSesionesController.cs" />
     <Compile Include="Controlador\ReporteLibrosController.cs" />
@@ -105,6 +108,8 @@
     <Compile Include="Modelo\Categorias.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\CRUDLibros.cs" />
+    <Compile Include="Modelo\Movimiento.cs" />
+    <Compile Include="Modelo\Proveedor.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,11 +139,23 @@
     <Compile Include="Vista\CRUD_Libros_Registros\CRUD_Libros.Designer.cs">
       <DependentUpon>CRUD_Libros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\CRUD_Libros_Registros\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CRUD_Libros_Registros\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Dashboard\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Movimientos\Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Movimientos\Movimientos.Designer.cs">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Reportes\MenuReportes.cs">
       <SubType>Form</SubType>
@@ -163,6 +180,12 @@
     </Compile>
     <Compile Include="Vista\Reportes\ReportesUsuarios.Designer.cs">
       <DependentUpon>ReportesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Resplados\Respaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Resplados\Respaldos.Designer.cs">
+      <DependentUpon>Respaldos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Usuarios\Usuarios.cs">
       <SubType>Form</SubType>
@@ -192,8 +215,14 @@
     <EmbeddedResource Include="Vista\CRUD_Libros_Registros\CRUD_Libros.resx">
       <DependentUpon>CRUD_Libros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CRUD_Libros_Registros\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Movimientos\Movimientos.resx">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Reportes\MenuReportes.resx">
       <DependentUpon>MenuReportes.cs</DependentUpon>
@@ -206,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Reportes\ReportesUsuarios.resx">
       <DependentUpon>ReportesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Resplados\Respaldos.resx">
+      <DependentUpon>Respaldos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Usuarios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -234,6 +266,7 @@
     <None Include="Resources\ai.png" />
     <None Include="Resources\data.png" />
     <None Include="Resources\database-management.png" />
+    <None Include="Resources\people.png" />
     <Content Include="ScriptsSQL\bd_inventario.txt" />
     <Content Include="ScriptsSQL\hola.txt" />
     <Content Include="ScriptsSQL\Instrucciones Desacrga.txt" />

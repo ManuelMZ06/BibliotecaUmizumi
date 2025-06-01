@@ -31,6 +31,8 @@
             this.lblSidebar = new System.Windows.Forms.Label();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.PanelSidebar = new System.Windows.Forms.Panel();
+            this.pbMovimientos = new System.Windows.Forms.PictureBox();
+            this.btnMovimientos = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
@@ -64,6 +66,10 @@
             this.pbCardRespaldos = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PanelContenido = new System.Windows.Forms.Panel();
+            this.panelCardMovimientos = new System.Windows.Forms.Panel();
+            this.btnCardMovimientos = new System.Windows.Forms.Button();
+            this.pbCardMovimientos = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.PanelPredictivo = new System.Windows.Forms.Panel();
             this.btnCardPredictivo = new System.Windows.Forms.Button();
             this.pbCardPredictivo = new System.Windows.Forms.PictureBox();
@@ -74,6 +80,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.PanelSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovimientos)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalisis)).BeginInit();
@@ -90,6 +97,8 @@
             this.panelCardRespaldos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).BeginInit();
             this.PanelContenido.SuspendLayout();
+            this.panelCardMovimientos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardMovimientos)).BeginInit();
             this.PanelPredictivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).BeginInit();
             this.panelCardAnalisis.SuspendLayout();
@@ -111,16 +120,19 @@
             this.btnUsuarios.BackColor = System.Drawing.Color.GhostWhite;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Location = new System.Drawing.Point(80, 249);
+            this.btnUsuarios.Location = new System.Drawing.Point(80, 187);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(297, 44);
             this.btnUsuarios.TabIndex = 1;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelSidebar.Controls.Add(this.pbMovimientos);
+            this.PanelSidebar.Controls.Add(this.btnMovimientos);
             this.PanelSidebar.Controls.Add(this.panel3);
             this.PanelSidebar.Controls.Add(this.pbPredictivo);
             this.PanelSidebar.Controls.Add(this.pbAnalisis);
@@ -139,8 +151,31 @@
             this.PanelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelSidebar.Location = new System.Drawing.Point(0, 0);
             this.PanelSidebar.Name = "PanelSidebar";
-            this.PanelSidebar.Size = new System.Drawing.Size(429, 1317);
+            this.PanelSidebar.Size = new System.Drawing.Size(429, 1450);
             this.PanelSidebar.TabIndex = 0;
+            // 
+            // pbMovimientos
+            // 
+            this.pbMovimientos.BackColor = System.Drawing.Color.Transparent;
+            this.pbMovimientos.Location = new System.Drawing.Point(4, 824);
+            this.pbMovimientos.Name = "pbMovimientos";
+            this.pbMovimientos.Size = new System.Drawing.Size(70, 44);
+            this.pbMovimientos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovimientos.TabIndex = 18;
+            this.pbMovimientos.TabStop = false;
+            // 
+            // btnMovimientos
+            // 
+            this.btnMovimientos.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientos.Location = new System.Drawing.Point(80, 824);
+            this.btnMovimientos.Name = "btnMovimientos";
+            this.btnMovimientos.Size = new System.Drawing.Size(297, 44);
+            this.btnMovimientos.TabIndex = 17;
+            this.btnMovimientos.Text = "Movimientos";
+            this.btnMovimientos.UseVisualStyleBackColor = false;
+            this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
             // 
             // panel3
             // 
@@ -177,7 +212,7 @@
             // pbPredictivo
             // 
             this.pbPredictivo.BackColor = System.Drawing.Color.Transparent;
-            this.pbPredictivo.Location = new System.Drawing.Point(4, 786);
+            this.pbPredictivo.Location = new System.Drawing.Point(4, 724);
             this.pbPredictivo.Name = "pbPredictivo";
             this.pbPredictivo.Size = new System.Drawing.Size(70, 44);
             this.pbPredictivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -187,7 +222,7 @@
             // pbAnalisis
             // 
             this.pbAnalisis.BackColor = System.Drawing.Color.Transparent;
-            this.pbAnalisis.Location = new System.Drawing.Point(4, 671);
+            this.pbAnalisis.Location = new System.Drawing.Point(4, 609);
             this.pbAnalisis.Name = "pbAnalisis";
             this.pbAnalisis.Size = new System.Drawing.Size(70, 44);
             this.pbAnalisis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +232,7 @@
             // pbRespaldos
             // 
             this.pbRespaldos.BackColor = System.Drawing.Color.Transparent;
-            this.pbRespaldos.Location = new System.Drawing.Point(4, 561);
+            this.pbRespaldos.Location = new System.Drawing.Point(4, 499);
             this.pbRespaldos.Name = "pbRespaldos";
             this.pbRespaldos.Size = new System.Drawing.Size(70, 44);
             this.pbRespaldos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,7 +242,7 @@
             // pbReportes
             // 
             this.pbReportes.BackColor = System.Drawing.Color.Transparent;
-            this.pbReportes.Location = new System.Drawing.Point(4, 450);
+            this.pbReportes.Location = new System.Drawing.Point(4, 388);
             this.pbReportes.Name = "pbReportes";
             this.pbReportes.Size = new System.Drawing.Size(70, 44);
             this.pbReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +252,7 @@
             // pbCRUD
             // 
             this.pbCRUD.BackColor = System.Drawing.Color.Transparent;
-            this.pbCRUD.Location = new System.Drawing.Point(4, 350);
+            this.pbCRUD.Location = new System.Drawing.Point(4, 288);
             this.pbCRUD.Name = "pbCRUD";
             this.pbCRUD.Size = new System.Drawing.Size(70, 44);
             this.pbCRUD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,7 +262,7 @@
             // pbUser
             // 
             this.pbUser.BackColor = System.Drawing.Color.Transparent;
-            this.pbUser.Location = new System.Drawing.Point(4, 249);
+            this.pbUser.Location = new System.Drawing.Point(4, 187);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(70, 44);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,60 +274,65 @@
             this.btnPredictivo.BackColor = System.Drawing.Color.GhostWhite;
             this.btnPredictivo.FlatAppearance.BorderSize = 0;
             this.btnPredictivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPredictivo.Location = new System.Drawing.Point(80, 786);
+            this.btnPredictivo.Location = new System.Drawing.Point(80, 724);
             this.btnPredictivo.Name = "btnPredictivo";
             this.btnPredictivo.Size = new System.Drawing.Size(297, 44);
             this.btnPredictivo.TabIndex = 7;
             this.btnPredictivo.Text = "Análisis Predictivo";
             this.btnPredictivo.UseVisualStyleBackColor = false;
+            this.btnPredictivo.Click += new System.EventHandler(this.btnPredictivo_Click);
             // 
             // btnAnalisis
             // 
             this.btnAnalisis.BackColor = System.Drawing.Color.GhostWhite;
             this.btnAnalisis.FlatAppearance.BorderSize = 0;
             this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalisis.Location = new System.Drawing.Point(80, 671);
+            this.btnAnalisis.Location = new System.Drawing.Point(80, 609);
             this.btnAnalisis.Name = "btnAnalisis";
             this.btnAnalisis.Size = new System.Drawing.Size(297, 44);
             this.btnAnalisis.TabIndex = 6;
             this.btnAnalisis.Text = "Análisis de Datos";
             this.btnAnalisis.UseVisualStyleBackColor = false;
+            this.btnAnalisis.Click += new System.EventHandler(this.btnAnalisis_Click);
             // 
             // btnRespaldos
             // 
             this.btnRespaldos.BackColor = System.Drawing.Color.GhostWhite;
             this.btnRespaldos.FlatAppearance.BorderSize = 0;
             this.btnRespaldos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRespaldos.Location = new System.Drawing.Point(80, 561);
+            this.btnRespaldos.Location = new System.Drawing.Point(80, 499);
             this.btnRespaldos.Name = "btnRespaldos";
             this.btnRespaldos.Size = new System.Drawing.Size(297, 44);
             this.btnRespaldos.TabIndex = 5;
             this.btnRespaldos.Text = "Respaldos";
             this.btnRespaldos.UseVisualStyleBackColor = false;
+            this.btnRespaldos.Click += new System.EventHandler(this.btnRespaldos_Click);
             // 
             // btnReportes
             // 
             this.btnReportes.BackColor = System.Drawing.Color.GhostWhite;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Location = new System.Drawing.Point(80, 450);
+            this.btnReportes.Location = new System.Drawing.Point(80, 388);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(297, 44);
             this.btnReportes.TabIndex = 4;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnCRUD
             // 
             this.btnCRUD.BackColor = System.Drawing.Color.GhostWhite;
             this.btnCRUD.FlatAppearance.BorderSize = 0;
             this.btnCRUD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCRUD.Location = new System.Drawing.Point(80, 350);
+            this.btnCRUD.Location = new System.Drawing.Point(80, 288);
             this.btnCRUD.Name = "btnCRUD";
             this.btnCRUD.Size = new System.Drawing.Size(297, 44);
             this.btnCRUD.TabIndex = 3;
             this.btnCRUD.Text = "CRUD";
             this.btnCRUD.UseVisualStyleBackColor = false;
+            this.btnCRUD.Click += new System.EventHandler(this.btnCRUD_Click);
             // 
             // label1
             // 
@@ -476,6 +516,7 @@
             this.btnCardRespaldos.TabIndex = 17;
             this.btnCardRespaldos.Text = "Acceder a Respaldos";
             this.btnCardRespaldos.UseVisualStyleBackColor = false;
+            this.btnCardRespaldos.Click += new System.EventHandler(this.btnCardRespaldos_Click);
             // 
             // pbCardRespaldos
             // 
@@ -501,6 +542,7 @@
             // 
             this.PanelContenido.AutoScroll = true;
             this.PanelContenido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PanelContenido.Controls.Add(this.panelCardMovimientos);
             this.PanelContenido.Controls.Add(this.PanelPredictivo);
             this.PanelContenido.Controls.Add(this.panelCardAnalisis);
             this.PanelContenido.Controls.Add(this.label8);
@@ -512,8 +554,52 @@
             this.PanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenido.Location = new System.Drawing.Point(429, 0);
             this.PanelContenido.Name = "PanelContenido";
-            this.PanelContenido.Size = new System.Drawing.Size(1341, 1317);
+            this.PanelContenido.Size = new System.Drawing.Size(1341, 1450);
             this.PanelContenido.TabIndex = 1;
+            // 
+            // panelCardMovimientos
+            // 
+            this.panelCardMovimientos.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelCardMovimientos.Controls.Add(this.btnCardMovimientos);
+            this.panelCardMovimientos.Controls.Add(this.pbCardMovimientos);
+            this.panelCardMovimientos.Controls.Add(this.label9);
+            this.panelCardMovimientos.Location = new System.Drawing.Point(135, 1097);
+            this.panelCardMovimientos.Name = "panelCardMovimientos";
+            this.panelCardMovimientos.Size = new System.Drawing.Size(506, 306);
+            this.panelCardMovimientos.TabIndex = 26;
+            // 
+            // btnCardMovimientos
+            // 
+            this.btnCardMovimientos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCardMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnCardMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardMovimientos.Location = new System.Drawing.Point(57, 233);
+            this.btnCardMovimientos.Name = "btnCardMovimientos";
+            this.btnCardMovimientos.Size = new System.Drawing.Size(390, 44);
+            this.btnCardMovimientos.TabIndex = 17;
+            this.btnCardMovimientos.Text = "Acceder a Movimientos";
+            this.btnCardMovimientos.UseVisualStyleBackColor = false;
+            this.btnCardMovimientos.Click += new System.EventHandler(this.btnCardMovimientos_Click);
+            // 
+            // pbCardMovimientos
+            // 
+            this.pbCardMovimientos.BackColor = System.Drawing.Color.Transparent;
+            this.pbCardMovimientos.Location = new System.Drawing.Point(96, 55);
+            this.pbCardMovimientos.Name = "pbCardMovimientos";
+            this.pbCardMovimientos.Size = new System.Drawing.Size(308, 165);
+            this.pbCardMovimientos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCardMovimientos.TabIndex = 16;
+            this.pbCardMovimientos.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(120, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(262, 43);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "M O V I M I E N T O S";
             // 
             // PanelPredictivo
             // 
@@ -607,7 +693,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Engravers MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(489, 9);
+            this.label8.Location = new System.Drawing.Point(503, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(382, 37);
             this.label8.TabIndex = 24;
@@ -618,7 +704,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1770, 1317);
+            this.ClientSize = new System.Drawing.Size(1770, 1450);
             this.Controls.Add(this.PanelContenido);
             this.Controls.Add(this.PanelSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -629,6 +715,7 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.PanelSidebar.ResumeLayout(false);
             this.PanelSidebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovimientos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPredictivo)).EndInit();
@@ -651,6 +738,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCardRespaldos)).EndInit();
             this.PanelContenido.ResumeLayout(false);
             this.PanelContenido.PerformLayout();
+            this.panelCardMovimientos.ResumeLayout(false);
+            this.panelCardMovimientos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCardMovimientos)).EndInit();
             this.PanelPredictivo.ResumeLayout(false);
             this.PanelPredictivo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCardPredictivo)).EndInit();
@@ -707,5 +797,11 @@
         private System.Windows.Forms.Button btnCardAnalisis;
         private System.Windows.Forms.PictureBox pbCardAnalisis;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panelCardMovimientos;
+        private System.Windows.Forms.Button btnCardMovimientos;
+        private System.Windows.Forms.PictureBox pbCardMovimientos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pbMovimientos;
+        private System.Windows.Forms.Button btnMovimientos;
     }
 }

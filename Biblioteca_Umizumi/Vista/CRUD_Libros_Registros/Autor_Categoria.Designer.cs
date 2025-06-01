@@ -30,11 +30,9 @@
         {
             this.btnActualizarAutor = new System.Windows.Forms.Button();
             this.btnAgregarAutor = new System.Windows.Forms.Button();
-            this.btnEliminarAutor = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnActulizarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
-            this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.dgvAutores = new System.Windows.Forms.DataGridView();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,20 +78,6 @@
             this.btnAgregarAutor.UseVisualStyleBackColor = false;
             this.btnAgregarAutor.Click += new System.EventHandler(this.btnAgregarAutor_Click_1);
             // 
-            // btnEliminarAutor
-            // 
-            this.btnEliminarAutor.BackColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarAutor.FlatAppearance.BorderSize = 0;
-            this.btnEliminarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAutor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarAutor.Location = new System.Drawing.Point(1178, 318);
-            this.btnEliminarAutor.Name = "btnEliminarAutor";
-            this.btnEliminarAutor.Size = new System.Drawing.Size(160, 42);
-            this.btnEliminarAutor.TabIndex = 5;
-            this.btnEliminarAutor.Text = "Eliminar";
-            this.btnEliminarAutor.UseVisualStyleBackColor = false;
-            this.btnEliminarAutor.Click += new System.EventHandler(this.btnEliminarAutor_Click_1);
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -132,20 +116,6 @@
             this.btnAgregarCategoria.Text = "Agregar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click_1);
-            // 
-            // btnEliminarCategoria
-            // 
-            this.btnEliminarCategoria.BackColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarCategoria.FlatAppearance.BorderSize = 0;
-            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCategoria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(1178, 964);
-            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(160, 42);
-            this.btnEliminarCategoria.TabIndex = 9;
-            this.btnEliminarCategoria.Text = "Eliminar";
-            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
-            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click_1);
             // 
             // dgvAutores
             // 
@@ -273,6 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1412, 1317);
             this.Controls.Add(this.btnRegresar);
@@ -290,11 +261,9 @@
             this.Controls.Add(this.dgvAutores);
             this.Controls.Add(this.btnActulizarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
-            this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnActualizarAutor);
             this.Controls.Add(this.btnAgregarAutor);
-            this.Controls.Add(this.btnEliminarAutor);
             this.Name = "Autor_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autor_Categoria";
@@ -310,11 +279,9 @@
 
         private System.Windows.Forms.Button btnActualizarAutor;
         private System.Windows.Forms.Button btnAgregarAutor;
-        private System.Windows.Forms.Button btnEliminarAutor;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnActulizarCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
-        private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.DataGridView dgvAutores;
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Label label1;
