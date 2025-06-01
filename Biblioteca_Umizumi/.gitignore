@@ -17,6 +17,7 @@ obj/
 
 #  Configuración de paquetes NuGet
 packages/
+packages/**/*
 *.nupkg
 project.lock.json
 project.fragment.lock.json
