@@ -624,6 +624,7 @@
             this.btnCardPredictivo.TabIndex = 17;
             this.btnCardPredictivo.Text = "Acceder a Análisis Predicitvo";
             this.btnCardPredictivo.UseVisualStyleBackColor = false;
+            this.btnCardPredictivo.Click += new System.EventHandler(this.btnCardPredictivo_Click);
             // 
             // pbCardPredictivo
             // 

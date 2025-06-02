@@ -197,5 +197,12 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             Vista.Movimientos.Movimientos movimientos = new Vista.Movimientos.Movimientos(idUsuario);
             movimientos.ShowDialog();
         }
+
+        private void btnCardPredictivo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.ModeloPredictivo.PrediccionDemanda prediccion = new Vista.ModeloPredictivo.PrediccionDemanda();
+            prediccion.ShowDialog();    
+        }
     }
 }

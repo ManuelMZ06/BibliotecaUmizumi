@@ -93,6 +93,11 @@
             // nudCantidad
             // 
             this.nudCantidad.Location = new System.Drawing.Point(177, 299);
+            this.nudCantidad.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(120, 26);
             this.nudCantidad.TabIndex = 18;

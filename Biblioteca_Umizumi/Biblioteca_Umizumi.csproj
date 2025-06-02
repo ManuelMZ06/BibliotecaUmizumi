@@ -78,6 +78,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -95,11 +96,13 @@
     <Compile Include="Controlador\BitacoraController.cs" />
     <Compile Include="Controlador\CategoriaController.cs" />
     <Compile Include="Controlador\CRUDLibrosController.cs" />
+    <Compile Include="Controlador\DemandaController.cs" />
     <Compile Include="Controlador\MovimientoController.cs" />
     <Compile Include="Controlador\ProveedorController.cs" />
     <Compile Include="Controlador\ReporteBitacoraAccionesController.cs" />
     <Compile Include="Controlador\ReporteBitacoraSesionesController.cs" />
     <Compile Include="Controlador\ReporteLibrosController.cs" />
+    <Compile Include="Controlador\ReporteMovimientoController.cs" />
     <Compile Include="Controlador\ReporteUsuariosController.cs" />
     <Compile Include="Controlador\SesionController.cs" />
     <Compile Include="Controlador\UserController.cs" />
@@ -108,8 +111,10 @@
     <Compile Include="Modelo\Categorias.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\CRUDLibros.cs" />
+    <Compile Include="Modelo\DemandaPrediccion.cs" />
     <Compile Include="Modelo\Movimiento.cs" />
     <Compile Include="Modelo\Proveedor.cs" />
+    <Compile Include="Modelo\ReporteMovimiento.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +156,12 @@
     <Compile Include="Vista\Dashboard\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ModeloPredictivo\PrediccionDemanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModeloPredictivo\PrediccionDemanda.Designer.cs">
+      <DependentUpon>PrediccionDemanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Movimientos\Movimientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +185,12 @@
     </Compile>
     <Compile Include="Vista\Reportes\ReportesLibros.Designer.cs">
       <DependentUpon>ReportesLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReportesMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReportesMovimientos.Designer.cs">
+      <DependentUpon>ReportesMovimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Reportes\ReportesUsuarios.cs">
       <SubType>Form</SubType>
@@ -221,6 +238,9 @@
     <EmbeddedResource Include="Vista\Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModeloPredictivo\PrediccionDemanda.resx">
+      <DependentUpon>PrediccionDemanda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Movimientos\Movimientos.resx">
       <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Reportes\ReportesLibros.resx">
       <DependentUpon>ReportesLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Reportes\ReportesMovimientos.resx">
+      <DependentUpon>ReportesMovimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Reportes\ReportesUsuarios.resx">
       <DependentUpon>ReportesUsuarios.cs</DependentUpon>

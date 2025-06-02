@@ -52,6 +52,8 @@ namespace Biblioteca_Umizumi.Vista.Movimientos
             MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             CargarMovimientos();
+
+            MessageBox.Show("ID del usuario actual: " + idUsuario);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

@@ -49,5 +49,12 @@ namespace Biblioteca_Umizumi.Vista.Reportes
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vista.Reportes.ReportesMovimientos movimientos = new ReportesMovimientos();
+            movimientos.ShowDialog();
+        }
     }
 }
