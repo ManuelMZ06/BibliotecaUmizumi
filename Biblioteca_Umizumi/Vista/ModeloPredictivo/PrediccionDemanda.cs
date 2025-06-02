@@ -85,14 +85,20 @@ namespace Biblioteca_Umizumi.Vista.ModeloPredictivo
             var serie = new Series("Predicción")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.SteelBlue,
+                Color = Color.Green, // color solicitado
                 IsValueShownAsLabel = true,
                 Font = new Font("Segoe UI", 9, FontStyle.Bold)
             };
 
+            // Establecer grosor de la barra
+            serie["PointWidth"] = "0.3";  // más delgada
+
+            // Agregar valor
             serie.Points.AddXY(fecha, prediccion);
+
             chartPrediccion.Series.Add(serie);
         }
+
 
 
         private void btnRegresar_Click(object sender, EventArgs e)
