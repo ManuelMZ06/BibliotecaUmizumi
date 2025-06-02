@@ -20,9 +20,11 @@ namespace Biblioteca_Umizumi.Vista.Reportes
 {
     public partial class ReportesLibros : Form
     {
-        public ReportesLibros()
+        private int idUsuario;
+        public ReportesLibros(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace Biblioteca_Umizumi.Vista.Reportes
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menu = new MenuReportes();
+            Vista.Reportes.MenuReportes menu = new MenuReportes(idUsuario);
             menu.ShowDialog();
         }
 

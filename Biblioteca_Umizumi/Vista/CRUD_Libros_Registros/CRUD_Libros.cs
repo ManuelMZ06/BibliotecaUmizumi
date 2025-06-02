@@ -184,7 +184,7 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         private void btnAutorCategoria_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Autor_Categoria form = new Autor_Categoria();
+            Autor_Categoria form = new Autor_Categoria(idUsuario);
             form.ShowDialog();
             this.Show();
             CargarCombos();
@@ -193,14 +193,14 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard();
+            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard(idUsuario);
             dashboard.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.CRUD_Libros_Registros.Proveedores proveedores = new Proveedores();
+            Vista.CRUD_Libros_Registros.Proveedores proveedores = new Proveedores(idUsuario);
             proveedores.ShowDialog();
         }
     }

@@ -15,9 +15,11 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
     public partial class Proveedores : Form
     {
         private ProveedorController proveedorController = new ProveedorController();
-        public Proveedores()
+        private int idUsuario;
+        public Proveedores(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
@@ -96,7 +98,7 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.CRUD_Libros_Registros.CRUD_Libros crud = new CRUD_Libros();
+            Vista.CRUD_Libros_Registros.CRUD_Libros crud = new CRUD_Libros(idUsuario);
             crud.ShowDialog();
         }
     }

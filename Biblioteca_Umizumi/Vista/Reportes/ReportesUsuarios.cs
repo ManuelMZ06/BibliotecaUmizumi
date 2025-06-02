@@ -13,15 +13,17 @@ namespace Biblioteca_Umizumi.Vista.Reportes
 {
     public partial class ReportesUsuarios : Form
     {
-        public ReportesUsuarios()
+        private int idUsuario;
+        public ReportesUsuarios(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menu = new MenuReportes();
+            Vista.Reportes.MenuReportes menu = new MenuReportes(idUsuario);
             menu.ShowDialog();
         }
 

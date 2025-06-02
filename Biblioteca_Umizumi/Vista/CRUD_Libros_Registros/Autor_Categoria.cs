@@ -11,10 +11,11 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
     {
         private AutorController autorController = new AutorController();
         private CategoriaController categoriaController = new CategoriaController();
-
-        public Autor_Categoria()
+        private int idUsuario;
+        public Autor_Categoria(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private void Autor_Categoria_Load(object sender, EventArgs e)
@@ -173,7 +174,7 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros();
+            Vista.CRUD_Libros_Registros.CRUD_Libros crudLibros = new Vista.CRUD_Libros_Registros.CRUD_Libros(idUsuario);
             crudLibros.ShowDialog();
         }
 

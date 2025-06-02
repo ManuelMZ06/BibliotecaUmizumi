@@ -12,22 +12,41 @@ using System.Runtime.InteropServices;
 using Biblioteca_Umizumi.Vista.Autenticacion;
 using Biblioteca_Umizumi.Modelo;
 using BibliotecaUmizumi.Controlador;
+using BibliotecaUmizumi.Modelo;
+using System.Data.SqlClient;
 
 namespace Biblioteca_Umizumi.Vista.Dashboard
 {
     public partial class Dashboard : Form
     {
-        private int idUsuario; 
+        private int idUsuario;
+        private int idRol; // para permisos
         public Dashboard(int idUsuario)
         {
             InitializeComponent();
             this.idUsuario = idUsuario;
+            this.idRol = ObtenerRolUsuario(idUsuario);
 
         }
         public Dashboard() // Constructor sin argumentos
         {
             InitializeComponent();
         }
+
+        private int ObtenerRolUsuario(int idUsuario)
+        {
+            using (SqlConnection conexion = Conexion.ObtenerConexion())
+            {
+                string query = "SELECT idRol FROM Usuarios WHERE IdUsuario = @id";
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", idUsuario);
+
+                var result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : -1;
+            }
+        }
+
+
 
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -37,7 +56,7 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             pbCRUD.Image = Properties.Resources.edit;
             pbReportes.Image = Properties.Resources.report;
             pbRespaldos.Image = Properties.Resources.database_management;
-            pbAnalisis.Image = Properties.Resources.data;
+            //pbAnalisis.Image = Properties.Resources.data;
             pbPredictivo.Image = Properties.Resources.ai;
             pbMovimientos.Image = Properties.Resources.people;
 
@@ -46,9 +65,16 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
             pbCardCRUD.Image = Properties.Resources.edit;
             pbCardReportes.Image = Properties.Resources.report;
             pbCardRespaldos.Image = Properties.Resources.database_management;
-            pbCardAnalisis.Image = Properties.Resources.data;
+            //pbCardAnalisis.Image = Properties.Resources.data;
             pbCardPredictivo.Image = Properties.Resources.ai;
             pbCardMovimientos.Image = Properties.Resources.people;
+
+            if (idRol == 2) // Si es empleado
+            {
+                panelCardUsuarios.Visible = false;
+                btnUsuarios.Visible = false;
+                pbUser.Visible = false;
+            }
         }
 
         public void RedondearPanel(Panel panel, int radio)
@@ -110,7 +136,7 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
 
         private void panelCardAnalisis_Paint(object sender, PaintEventArgs e)
         {
-            RedondearPanel(panelCardAnalisis, 10);
+            
         }
 
         private void PanelPredictivo_Paint(object sender, PaintEventArgs e)
@@ -135,14 +161,14 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
         private void btnCardReportes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes();
+            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes(idUsuario);
             menuReportes.ShowDialog(); ;
         }
 
         private void btnCardRespaldos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos();
+            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos(idUsuario);
             fRespaldos.ShowDialog(); ;
         }
 
@@ -163,14 +189,14 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
         private void btnReportes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes();
+            Vista.Reportes.MenuReportes menuReportes = new Reportes.MenuReportes(idUsuario);
             menuReportes.ShowDialog();
         }
 
         private void btnRespaldos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos();
+            Vista.Resplados.Respaldos fRespaldos = new Resplados.Respaldos(idUsuario);
             fRespaldos.ShowDialog();
         }
 
@@ -201,8 +227,24 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
         private void btnCardPredictivo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.ModeloPredictivo.PrediccionDemanda prediccion = new Vista.ModeloPredictivo.PrediccionDemanda();
+            Vista.ModeloPredictivo.PrediccionDemanda prediccion = new Vista.ModeloPredictivo.PrediccionDemanda(idUsuario);
             prediccion.ShowDialog();    
+        }
+
+        private void panelCardMovimientos_Paint(object sender, PaintEventArgs e)
+        {
+            RedondearPanel(panelCardMovimientos, 10);
+        }
+
+
+        private void PanelContenido_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pbUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

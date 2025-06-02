@@ -18,9 +18,11 @@ namespace Biblioteca_Umizumi.Vista.ModeloPredictivo
 {
     public partial class PrediccionDemanda : Form
     {
-        public PrediccionDemanda()
+        private int idUsuario;
+        public PrediccionDemanda(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private DemandaController controller = new DemandaController();
@@ -104,7 +106,7 @@ namespace Biblioteca_Umizumi.Vista.ModeloPredictivo
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard();
+            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard(idUsuario);
             dashboard.ShowDialog();
         }
 

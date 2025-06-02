@@ -16,9 +16,11 @@ namespace Biblioteca_Umizumi.Vista.Reportes
 {
     public partial class ReportesMovimientos : Form
     {
-        public ReportesMovimientos()
+        private int id_Usuario;
+        public ReportesMovimientos(int id_Usuario)
         {
             InitializeComponent();
+            this.id_Usuario = id_Usuario;
         }
 
         private void ReportesMovimientos_Load(object sender, EventArgs e)
@@ -102,8 +104,8 @@ namespace Biblioteca_Umizumi.Vista.Reportes
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard();
-            dashboard.ShowDialog();
+            Vista.Reportes.MenuReportes menuReportes = new Vista.Reportes.MenuReportes(id_Usuario);
+            menuReportes.ShowDialog();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

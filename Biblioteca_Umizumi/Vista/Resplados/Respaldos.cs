@@ -15,9 +15,11 @@ namespace Biblioteca_Umizumi.Vista.Resplados
 {
     public partial class Respaldos : Form
     {
-        public Respaldos()
+        private int idUsuario;
+        public Respaldos(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
         private void Respaldos_Load(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace Biblioteca_Umizumi.Vista.Resplados
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard();  
+            Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard(idUsuario);  
             dashboard.ShowDialog();
         }
 

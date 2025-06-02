@@ -13,9 +13,11 @@ namespace Biblioteca_Umizumi.Vista.Reportes
 {
     public partial class ReportesBitacoras : Form
     {
-        public ReportesBitacoras()
+        private int idUsuario;
+        public ReportesBitacoras(int idUsuario)
         {
             InitializeComponent();
+            this.idUsuario = idUsuario;
         }
 
 
@@ -65,7 +67,7 @@ namespace Biblioteca_Umizumi.Vista.Reportes
         private void btnRegresar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menu = new Vista.Reportes.MenuReportes();
+            Vista.Reportes.MenuReportes menu = new Vista.Reportes.MenuReportes(idUsuario);
             menu.ShowDialog();
         }
 
@@ -105,7 +107,7 @@ namespace Biblioteca_Umizumi.Vista.Reportes
         private void btnRegresar2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Vista.Reportes.MenuReportes menu = new Vista.Reportes.MenuReportes();
+            Vista.Reportes.MenuReportes menu = new Vista.Reportes.MenuReportes (idUsuario);
             menu.ShowDialog();
         }
     }
