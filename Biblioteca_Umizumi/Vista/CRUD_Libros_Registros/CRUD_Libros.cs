@@ -127,29 +127,50 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
         {
             if (dgvLibros.CurrentRow != null)
             {
-                int id = Convert.ToInt32(dgvLibros.CurrentRow.Cells["IdLibro"].Value);
-
-                Libro libro = new Libro
+                try
                 {
-                    IdLibro = id,
-                    Titulo = txtTitulo.Text,
-                    IdAutor = (int)cbAutor.SelectedValue,
-                    IdCategoria = (int)cbCategoria.SelectedValue,
-                    IdProveedor = (int)cbProveedor.SelectedValue,
-                    Cantidad_Stock = (int)nudStock.Value,
-                    PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
-                    PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
-                    Descripcion = txtDescripcion.Text,
-                    Status = cbEstado.SelectedItem.ToString() == "Activado"
-                };
+                    int id = Convert.ToInt32(dgvLibros.CurrentRow.Cells["IdLibro"].Value);
 
-                libroController.EditarLibro(libro);
-                CargarLibros();
-                LimpiarCampos();
+                    Libro libro = new Libro
+                    {
+                        IdLibro = id,
+                        Titulo = txtTitulo.Text,
+                        IdAutor = (int)cbAutor.SelectedValue,
+                        IdCategoria = (int)cbCategoria.SelectedValue,
+                        IdProveedor = (int)cbProveedor.SelectedValue,
+                        Cantidad_Stock = (int)nudStock.Value,
+                        PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
+                        PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
+                        Descripcion = txtDescripcion.Text,
+                        Status = cbEstado.SelectedItem.ToString() == "Activado"
+                    };
+
+                    libroController.EditarLibro(libro);
+                    CargarLibros();
+                    LimpiarCampos();
+
+                    MessageBox.Show("✅ Libro actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BitacoraController.RegistrarAccion(idUsuario, "UPDATE", "Libros");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("❌ Error de formato: asegúrate de que los precios sean numéricos válidos.", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch (InvalidCastException)
+                {
+                    MessageBox.Show("❌ Error al convertir datos: revisa que los campos seleccionados (autor, categoría, proveedor) estén correctamente definidos.", "Error de conversión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"❌ Error inesperado al actualizar el libro:\n{ex.Message}", "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-            BitacoraController.RegistrarAccion(idUsuario, "UPDATE", "Libros");
+            else
+            {
+                MessageBox.Show("❗ Selecciona un libro antes de actualizar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
@@ -202,6 +223,11 @@ namespace Biblioteca_Umizumi.Vista.CRUD_Libros_Registros
             this.Hide();
             Vista.CRUD_Libros_Registros.Proveedores proveedores = new Proveedores(idUsuario);
             proveedores.ShowDialog();
+        }
+
+        private void lblDatos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -62,5 +62,40 @@ namespace Biblioteca_Umizumi.Vista.Movimientos
             Vista.Dashboard.Dashboard dashboard = new Vista.Dashboard.Dashboard(idUsuario);
             dashboard.ShowDialog();
         }
+
+        private void lblSidebar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportadorPDF.Exportar(dgvMovimientos, "Reporte de Movimientos");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ExportadorExcel.Exportar(dgvMovimientos, "Reporte de Movimientos");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

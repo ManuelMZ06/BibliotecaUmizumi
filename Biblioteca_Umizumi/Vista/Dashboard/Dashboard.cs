@@ -207,7 +207,9 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
 
         private void btnPredictivo_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Vista.ModeloPredictivo.PrediccionDemanda prediccion = new Vista.ModeloPredictivo.PrediccionDemanda(idUsuario);
+            prediccion.ShowDialog();
         }
 
         private void btnMovimientos_Click(object sender, EventArgs e)
@@ -243,6 +245,11 @@ namespace Biblioteca_Umizumi.Vista.Dashboard
         }
 
         private void pbUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

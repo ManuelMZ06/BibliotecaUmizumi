@@ -72,5 +72,10 @@ namespace Biblioteca_Umizumi.Vista.Autenticacion
                 MessageBox.Show("❌ Usuario o contraseña incorrectos.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void lblpassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

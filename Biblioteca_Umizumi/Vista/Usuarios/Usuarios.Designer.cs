@@ -39,32 +39,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(602, 9);
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(535, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(498, 61);
+            this.label1.Size = new System.Drawing.Size(417, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIOS   DEL   SISTEMA";
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(12, 127);
+            this.dgvUsuarios.Location = new System.Drawing.Point(41, 81);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 62;
             this.dgvUsuarios.RowTemplate.Height = 28;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1334, 362);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1186, 341);
             this.dgvUsuarios.TabIndex = 1;
             // 
             // btnActivar
             // 
-            this.btnActivar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnActivar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnActivar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActivar.FlatAppearance.BorderSize = 0;
             this.btnActivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActivar.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActivar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActivar.Location = new System.Drawing.Point(1414, 249);
+            this.btnActivar.Location = new System.Drawing.Point(1260, 202);
+            this.btnActivar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(160, 42);
+            this.btnActivar.Size = new System.Drawing.Size(142, 40);
             this.btnActivar.TabIndex = 8;
             this.btnActivar.Text = "Activar";
             this.btnActivar.UseVisualStyleBackColor = false;
@@ -72,13 +78,16 @@
             // 
             // btnDesactivar
             // 
-            this.btnDesactivar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDesactivar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDesactivar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesactivar.FlatAppearance.BorderSize = 0;
             this.btnDesactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesactivar.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesactivar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDesactivar.Location = new System.Drawing.Point(1414, 319);
+            this.btnDesactivar.Location = new System.Drawing.Point(1260, 258);
+            this.btnDesactivar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDesactivar.Name = "btnDesactivar";
-            this.btnDesactivar.Size = new System.Drawing.Size(160, 42);
+            this.btnDesactivar.Size = new System.Drawing.Size(142, 40);
             this.btnDesactivar.TabIndex = 7;
             this.btnDesactivar.Text = "Desactivar";
             this.btnDesactivar.UseVisualStyleBackColor = false;
@@ -86,10 +95,12 @@
             // 
             // btnRegresar
             // 
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(12, 12);
+            this.btnRegresar.Location = new System.Drawing.Point(11, 10);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(78, 58);
+            this.btnRegresar.Size = new System.Drawing.Size(69, 46);
             this.btnRegresar.TabIndex = 26;
             this.btnRegresar.Text = "←";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -97,15 +108,16 @@
             // 
             // Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1610, 574);
+            this.ClientSize = new System.Drawing.Size(1431, 459);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnActivar);
             this.Controls.Add(this.btnDesactivar);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);

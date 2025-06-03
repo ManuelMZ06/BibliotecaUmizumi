@@ -30,7 +30,6 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
-            this.btnEliminarLibro = new System.Windows.Forms.Button();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
             this.btnActualizarLibro = new System.Windows.Forms.Button();
             this.lblDatos = new System.Windows.Forms.Label();
@@ -62,48 +61,39 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(720, 9);
+            this.lblTitulo.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 24F);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTitulo.Location = new System.Drawing.Point(647, 30);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(296, 42);
+            this.lblTitulo.Size = new System.Drawing.Size(470, 61);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Registros Inventario";
+            this.lblTitulo.Text = "REGISTROS INVENTARIO";
             // 
             // dgvLibros
             // 
             this.dgvLibros.AllowUserToAddRows = false;
             this.dgvLibros.AllowUserToDeleteRows = false;
+            this.dgvLibros.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLibros.Location = new System.Drawing.Point(806, 139);
+            this.dgvLibros.Location = new System.Drawing.Point(841, 240);
+            this.dgvLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.RowHeadersWidth = 62;
             this.dgvLibros.RowTemplate.Height = 28;
-            this.dgvLibros.Size = new System.Drawing.Size(823, 477);
+            this.dgvLibros.Size = new System.Drawing.Size(824, 512);
             this.dgvLibros.TabIndex = 1;
-            // 
-            // btnEliminarLibro
-            // 
-            this.btnEliminarLibro.BackColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarLibro.FlatAppearance.BorderSize = 0;
-            this.btnEliminarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarLibro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarLibro.Location = new System.Drawing.Point(1343, 91);
-            this.btnEliminarLibro.Name = "btnEliminarLibro";
-            this.btnEliminarLibro.Size = new System.Drawing.Size(160, 42);
-            this.btnEliminarLibro.TabIndex = 2;
-            this.btnEliminarLibro.Text = "Eliminar";
-            this.btnEliminarLibro.UseVisualStyleBackColor = false;
-            this.btnEliminarLibro.Click += new System.EventHandler(this.btnEliminarLibro_Click);
             // 
             // btnAgregarLibro
             // 
-            this.btnAgregarLibro.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnAgregarLibro.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAgregarLibro.FlatAppearance.BorderSize = 0;
             this.btnAgregarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarLibro.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnAgregarLibro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAgregarLibro.Location = new System.Drawing.Point(1139, 91);
+            this.btnAgregarLibro.Location = new System.Drawing.Point(1284, 171);
+            this.btnAgregarLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(160, 42);
+            this.btnAgregarLibro.Size = new System.Drawing.Size(160, 50);
             this.btnAgregarLibro.TabIndex = 3;
             this.btnAgregarLibro.Text = "Agregar";
             this.btnAgregarLibro.UseVisualStyleBackColor = false;
@@ -111,13 +101,15 @@
             // 
             // btnActualizarLibro
             // 
-            this.btnActualizarLibro.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnActualizarLibro.BackColor = System.Drawing.Color.Gold;
             this.btnActualizarLibro.FlatAppearance.BorderSize = 0;
             this.btnActualizarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarLibro.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnActualizarLibro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActualizarLibro.Location = new System.Drawing.Point(933, 91);
+            this.btnActualizarLibro.Location = new System.Drawing.Point(1078, 171);
+            this.btnActualizarLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarLibro.Name = "btnActualizarLibro";
-            this.btnActualizarLibro.Size = new System.Drawing.Size(160, 42);
+            this.btnActualizarLibro.Size = new System.Drawing.Size(160, 50);
             this.btnActualizarLibro.TabIndex = 4;
             this.btnActualizarLibro.Text = "Actualizar";
             this.btnActualizarLibro.UseVisualStyleBackColor = false;
@@ -126,48 +118,61 @@
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatos.Location = new System.Drawing.Point(385, 75);
+            this.lblDatos.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 18F);
+            this.lblDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDatos.Location = new System.Drawing.Point(238, 106);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(71, 27);
+            this.lblDatos.Size = new System.Drawing.Size(378, 42);
             this.lblDatos.TabIndex = 5;
-            this.lblDatos.Text = "Datos";
+            this.lblDatos.Text = "I N G R E S A R       D A T O S";
+            this.lblDatos.Click += new System.EventHandler(this.lblDatos_Click);
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(180, 139);
+            this.txtTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTitulo.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.txtTitulo.Location = new System.Drawing.Point(237, 188);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(562, 26);
+            this.txtTitulo.Size = new System.Drawing.Size(562, 36);
             this.txtTitulo.TabIndex = 6;
             // 
             // txtPrecioCompra
             // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(180, 458);
+            this.txtPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(237, 449);
+            this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(562, 26);
+            this.txtPrecioCompra.Size = new System.Drawing.Size(562, 36);
             this.txtPrecioCompra.TabIndex = 10;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(180, 514);
+            this.txtPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(237, 508);
+            this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(562, 26);
+            this.txtPrecioVenta.Size = new System.Drawing.Size(562, 36);
             this.txtPrecioVenta.TabIndex = 11;
             // 
             // cbEstado
             // 
+            this.cbEstado.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "Activado",
-            "Desactivado"});
-            this.cbEstado.Location = new System.Drawing.Point(180, 572);
+            this.cbEstado.Location = new System.Drawing.Point(237, 568);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(303, 28);
+            this.cbEstado.Size = new System.Drawing.Size(562, 38);
             this.cbEstado.TabIndex = 13;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(180, 626);
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.txtDescripcion.Location = new System.Drawing.Point(237, 634);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(562, 222);
@@ -176,110 +181,116 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 134);
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label1.Location = new System.Drawing.Point(37, 168);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 24);
+            this.label1.Size = new System.Drawing.Size(69, 30);
             this.label1.TabIndex = 15;
             this.label1.Text = "Titulo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 198);
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label2.Location = new System.Drawing.Point(37, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 24);
+            this.label2.Size = new System.Drawing.Size(69, 30);
             this.label2.TabIndex = 16;
             this.label2.Text = "Autor";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 458);
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label4.Location = new System.Drawing.Point(35, 429);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 24);
+            this.label4.Size = new System.Drawing.Size(193, 30);
             this.label4.TabIndex = 18;
             this.label4.Text = "Precio de Compra";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 397);
+            this.label5.Enabled = false;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label5.Location = new System.Drawing.Point(822, 946);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.Size = new System.Drawing.Size(67, 30);
             this.label5.TabIndex = 19;
             this.label5.Text = "Stock";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 262);
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label6.Location = new System.Drawing.Point(37, 296);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 24);
+            this.label6.Size = new System.Drawing.Size(108, 30);
             this.label6.TabIndex = 20;
             this.label6.Text = "Categoría";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 516);
+            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label7.Location = new System.Drawing.Point(37, 488);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 24);
+            this.label7.Size = new System.Drawing.Size(173, 30);
             this.label7.TabIndex = 21;
             this.label7.Text = "Precio de Venta";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 576);
+            this.label8.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label8.Location = new System.Drawing.Point(38, 548);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 24);
+            this.label8.Size = new System.Drawing.Size(79, 30);
             this.label8.TabIndex = 22;
             this.label8.Text = "Estado";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 626);
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label9.Location = new System.Drawing.Point(38, 614);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 24);
+            this.label9.Size = new System.Drawing.Size(128, 30);
             this.label9.TabIndex = 23;
             this.label9.Text = "Descripción";
             // 
             // cbAutor
             // 
+            this.cbAutor.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.cbAutor.FormattingEnabled = true;
-            this.cbAutor.Location = new System.Drawing.Point(180, 203);
+            this.cbAutor.Location = new System.Drawing.Point(237, 251);
+            this.cbAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbAutor.Name = "cbAutor";
-            this.cbAutor.Size = new System.Drawing.Size(562, 28);
+            this.cbAutor.Size = new System.Drawing.Size(562, 38);
             this.cbAutor.TabIndex = 24;
             // 
             // cbCategoria
             // 
+            this.cbCategoria.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(180, 262);
+            this.cbCategoria.Location = new System.Drawing.Point(237, 316);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(562, 28);
+            this.cbCategoria.Size = new System.Drawing.Size(562, 38);
             this.cbCategoria.TabIndex = 25;
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegresar.Location = new System.Drawing.Point(1152, 736);
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRegresar.Location = new System.Drawing.Point(14, 14);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(160, 42);
+            this.btnRegresar.Size = new System.Drawing.Size(78, 65);
             this.btnRegresar.TabIndex = 26;
-            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Text = "←";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
@@ -288,10 +299,12 @@
             this.btnAutorCategoria.BackColor = System.Drawing.Color.Gray;
             this.btnAutorCategoria.FlatAppearance.BorderSize = 0;
             this.btnAutorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAutorCategoria.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnAutorCategoria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAutorCategoria.Location = new System.Drawing.Point(1126, 638);
+            this.btnAutorCategoria.Location = new System.Drawing.Point(980, 774);
+            this.btnAutorCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAutorCategoria.Name = "btnAutorCategoria";
-            this.btnAutorCategoria.Size = new System.Drawing.Size(217, 42);
+            this.btnAutorCategoria.Size = new System.Drawing.Size(267, 50);
             this.btnAutorCategoria.TabIndex = 27;
             this.btnAutorCategoria.Text = "Ingresar Autor/Categoría";
             this.btnAutorCategoria.UseVisualStyleBackColor = false;
@@ -299,9 +312,11 @@
             // 
             // nudStock
             // 
-            this.nudStock.Location = new System.Drawing.Point(180, 395);
+            this.nudStock.Enabled = false;
+            this.nudStock.Location = new System.Drawing.Point(824, 939);
+            this.nudStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudStock.Name = "nudStock";
-            this.nudStock.Size = new System.Drawing.Size(185, 26);
+            this.nudStock.Size = new System.Drawing.Size(184, 26);
             this.nudStock.TabIndex = 28;
             // 
             // button1
@@ -309,10 +324,12 @@
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1126, 688);
+            this.button1.Location = new System.Drawing.Point(1284, 774);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 42);
+            this.button1.Size = new System.Drawing.Size(267, 50);
             this.button1.TabIndex = 29;
             this.button1.Text = "Ingresar Proveedor";
             this.button1.UseVisualStyleBackColor = false;
@@ -320,19 +337,21 @@
             // 
             // cbProveedor
             // 
+            this.cbProveedor.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(180, 327);
+            this.cbProveedor.Location = new System.Drawing.Point(237, 381);
+            this.cbProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProveedor.Name = "cbProveedor";
-            this.cbProveedor.Size = new System.Drawing.Size(562, 28);
+            this.cbProveedor.Size = new System.Drawing.Size(562, 38);
             this.cbProveedor.TabIndex = 31;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 327);
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.label3.Location = new System.Drawing.Point(38, 365);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 24);
+            this.label3.Size = new System.Drawing.Size(116, 30);
             this.label3.TabIndex = 30;
             this.label3.Text = "Proveedor";
             // 
@@ -341,7 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1688, 884);
+            this.ClientSize = new System.Drawing.Size(1688, 882);
             this.Controls.Add(this.cbProveedor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -366,9 +385,9 @@
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.btnActualizarLibro);
             this.Controls.Add(this.btnAgregarLibro);
-            this.Controls.Add(this.btnEliminarLibro);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.lblTitulo);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CRUD_Libros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_Libros";
@@ -384,7 +403,6 @@
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvLibros;
-        private System.Windows.Forms.Button btnEliminarLibro;
         private System.Windows.Forms.Button btnAgregarLibro;
         private System.Windows.Forms.Button btnActualizarLibro;
         private System.Windows.Forms.Label lblDatos;

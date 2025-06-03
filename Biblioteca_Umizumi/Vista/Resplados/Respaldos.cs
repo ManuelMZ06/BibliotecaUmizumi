@@ -16,10 +16,12 @@ namespace Biblioteca_Umizumi.Vista.Resplados
     public partial class Respaldos : Form
     {
         private int idUsuario;
+        private int idRol;
         public Respaldos(int idUsuario)
         {
             InitializeComponent();
             this.idUsuario = idUsuario;
+            this.idRol = ObtenerRolUsuario(idUsuario);
         }
 
         private void Respaldos_Load(object sender, EventArgs e)
@@ -36,13 +38,22 @@ namespace Biblioteca_Umizumi.Vista.Resplados
 
         private void btnRespaldar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRuta.Text))
+            if (idRol == 2)
             {
-                MessageBox.Show("Por favor selecciona una carpeta de destino.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("❌ Permiso denegado. No tienes acceso a esta opcón, comúnicate con el administrador.", "Acceso restringido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(txtRuta.Text))
+                {
+                    MessageBox.Show("Por favor selecciona una carpeta de destino.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            BackupController.CrearBackup(txtRuta.Text.Trim());
+                BackupController.CrearBackup(txtRuta.Text.Trim());
+            }
+            
         }
 
         private void btnSeleccionarRuta_Click(object sender, EventArgs e)
@@ -84,6 +95,20 @@ namespace Biblioteca_Umizumi.Vista.Resplados
                 {
                     MessageBox.Show("❌ Error al restaurar respaldo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        ////
+        private int ObtenerRolUsuario(int idUsuario)
+        {
+            using (SqlConnection conexion = Conexion.ObtenerConexion())
+            {
+                string query = "SELECT idRol FROM Usuarios WHERE IdUsuario = @id";
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", idUsuario);
+
+                var result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : -1;
             }
         }
     }

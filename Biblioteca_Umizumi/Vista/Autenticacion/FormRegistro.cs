@@ -44,5 +44,10 @@ namespace Biblioteca_Umizumi.Vista.Autenticacion
             string resultado = UsuarioController.RegistrarUsuario(usuario, password);
             MessageBox.Show(resultado, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

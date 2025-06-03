@@ -80,6 +80,11 @@ namespace Biblioteca_Umizumi.Vista.Reportes
             menu.ShowDialog();
         }
 
+        private void dtpFin_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //
     }
 }

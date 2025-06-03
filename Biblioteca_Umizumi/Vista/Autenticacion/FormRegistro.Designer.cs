@@ -46,21 +46,26 @@
             // LinkLogin
             // 
             this.LinkLogin.AutoSize = true;
-            this.LinkLogin.Location = new System.Drawing.Point(156, 532);
+            this.LinkLogin.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.LinkLogin.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.LinkLogin.Location = new System.Drawing.Point(141, 518);
             this.LinkLogin.Name = "LinkLogin";
-            this.LinkLogin.Size = new System.Drawing.Size(87, 16);
+            this.LinkLogin.Size = new System.Drawing.Size(118, 25);
             this.LinkLogin.TabIndex = 7;
             this.LinkLogin.TabStop = true;
             this.LinkLogin.Text = "Iniciar Sesión";
+            this.LinkLogin.VisitedLinkColor = System.Drawing.Color.DarkSlateGray;
             this.LinkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLogin_LinkClicked);
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(129, 464);
+            this.btnIngresar.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnIngresar.Location = new System.Drawing.Point(129, 457);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(140, 42);
             this.btnIngresar.TabIndex = 6;
-            this.btnIngresar.Text = "Resgistrar";
+            this.btnIngresar.Text = "Registrarme";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
@@ -68,7 +73,7 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(44, 80);
+            this.groupBox1.Location = new System.Drawing.Point(44, 70);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(322, 366);
             this.groupBox1.TabIndex = 5;
@@ -94,9 +99,10 @@
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(16, 30);
+            this.lblpassword.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
+            this.lblpassword.Location = new System.Drawing.Point(16, 35);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(76, 16);
+            this.lblpassword.Size = new System.Drawing.Size(102, 25);
             this.lblpassword.TabIndex = 1;
             this.lblpassword.Text = "Contraseña";
             // 
@@ -120,26 +126,30 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.lblUsuario.Location = new System.Drawing.Point(16, 34);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 25);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(154, 41);
+            this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 16.2F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.Teal;
+            this.lblTitulo.Location = new System.Drawing.Point(140, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(109, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(125, 34);
             this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "Registrate";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(411, 569);
             this.Controls.Add(this.LinkLogin);
             this.Controls.Add(this.btnIngresar);

@@ -47,10 +47,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(149, 18);
+            this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(138, 16);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(128, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(143, 34);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Bienvenid@";
             // 
@@ -84,11 +84,13 @@
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
+            this.lblpassword.Font = new System.Drawing.Font("Malgun Gothic", 10.8F);
             this.lblpassword.Location = new System.Drawing.Point(16, 30);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(76, 16);
+            this.lblpassword.Size = new System.Drawing.Size(102, 25);
             this.lblpassword.TabIndex = 1;
             this.lblpassword.Text = "Contraseña";
+            this.lblpassword.Click += new System.EventHandler(this.lblpassword_Click);
             // 
             // groupBox2
             // 
@@ -110,14 +112,17 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(16, 34);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 25);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario";
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnIngresar.Location = new System.Drawing.Point(138, 462);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(140, 42);
@@ -129,21 +134,24 @@
             // LinkRegistrar
             // 
             this.LinkRegistrar.AutoSize = true;
+            this.LinkRegistrar.LinkColor = System.Drawing.Color.DodgerBlue;
             this.LinkRegistrar.Location = new System.Drawing.Point(135, 526);
             this.LinkRegistrar.Name = "LinkRegistrar";
             this.LinkRegistrar.Size = new System.Drawing.Size(146, 16);
             this.LinkRegistrar.TabIndex = 3;
             this.LinkRegistrar.TabStop = true;
             this.LinkRegistrar.Text = "¿No tienes una cuenta?";
+            this.LinkRegistrar.VisitedLinkColor = System.Drawing.Color.DarkSlateGray;
             this.LinkRegistrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkRegistrar_LinkClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(116, 50);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(114, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
+            this.label1.Size = new System.Drawing.Size(185, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "Inventario Umizumi";
             // 
@@ -151,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(411, 569);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LinkRegistrar);

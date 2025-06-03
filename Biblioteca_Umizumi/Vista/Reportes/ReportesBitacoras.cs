@@ -110,5 +110,10 @@ namespace Biblioteca_Umizumi.Vista.Reportes
             Vista.Reportes.MenuReportes menu = new Vista.Reportes.MenuReportes (idUsuario);
             menu.ShowDialog();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
